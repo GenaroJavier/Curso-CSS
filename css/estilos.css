@@ -1,0 +1,40 @@
+h1 {
+	color: red;
+}
+
+/*Uso de clases*/
+.ejemplo-clase{
+	color: green; 
+}
+
+
+/*Uso de IDs*/
+#ejemplo-id{
+	color: orange; 	
+}
+
+[tex-gen="texto-genaro"] {
+	color: brown; 
+}
+
+/*Orden descendiente*/
+h1 b {
+	color: purple; 
+}
+
+h1 b:hover {
+	color: #C70039; 
+}
+
+
+.contact-form__input--active{
+	color: red; 
+}
+
+.contact-form__input{
+	color: blue; 
+}
+
+.contact-form__p-h4{
+	color: purple; 
+}
