@@ -8,15 +8,23 @@ body {
 	background-color: #2a9d8f;
 }
 
-.texto {
-	padding: 20px;
+form {
+	width: 50%;
+	margin: 100px auto;
+	display: block;
+	background-color: #f4a261;
+	padding: 100px;
 }
 
-.texto::first-letter{
-	color: white;
-	font-size: 40px;
+input {
+	padding: 6px;
+	width: 100%;
 }
 
+input::placeholder {
+	color: red;
+	background: yellow;
+}
 /*
 Pseudoelementos
 Un pseudoelemento CSS se utiliza para diseñar partes específicas de un elemento.
