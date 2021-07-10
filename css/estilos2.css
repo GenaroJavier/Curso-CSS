@@ -8,49 +8,23 @@ body {
 	background-color: #2a9d8f;
 }
 
-.contenedor{
-	width: 60%;
-	height: 400px;
-	margin: auto;
-	margin-top: 20px;
-	overflow-y: scroll;
-	overflow-x: hidden;
-	border-radius: 20px;
-}
-
-.contenedor h1 {
-	text-align: center;
-	margin-bottom: 10px;
-}
-
-.primario {
-	width: 100%;
-	background-color: #e9c46a;
+.texto {
 	padding: 20px;
 }
 
-.contenedor img {
-	margin-right: 10px;
-	width: 300px;
-	height: 200px;
-	float: left;
+.texto::first-line {
+	color: white;
 }
 
-
 /*
+Pseudoelementos
+Un pseudoelemento CSS se utiliza para diseñar partes específicas de un elemento.
 
-La floatpropiedad CSS especifica cómo debe flotar un elemento.
-La clearpropiedad CSS especifica qué elementos pueden flotar junto al elemento borrado y en qué lado.
-La floatpropiedad se utiliza para posicionar y dar formato al contenido, por ejemplo, dejar que una imagen flote a la izquierda del texto en un contenedor.
+Por ejemplo, se puede utilizar para:
 
-La floatpropiedad puede tener uno de los siguientes valores:
+Aplicar estilo a la primera letra o línea de un elemento
+Insertar contenido antes o después del contenido de un elemento
 
-left - El elemento flota a la izquierda de su contenedor.
-right - El elemento flota a la derecha de su contenedor.
-none- El elemento no flota (se mostrará justo donde aparece en el texto). Esto es predeterminado
-inherit - El elemento hereda el valor flotante de su padre
-En su uso más simple, la floatpropiedad se puede utilizar para ajustar texto alrededor de imágenes.
-
-
+Nota: no funciona en elemento inline
 
 */
