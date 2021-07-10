@@ -12,8 +12,9 @@ body {
 	padding: 20px;
 }
 
-.texto::first-line {
+.texto::first-letter{
 	color: white;
+	font-size: 40px;
 }
 
 /*
