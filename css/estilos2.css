@@ -16,16 +16,26 @@ form {
 	padding: 100px;
 }
 
-input {
+p {
+	text-align: center;
 	padding: 6px;
 	width: 100%;
 }
 
-input::placeholder {
+p::before {
+	content: "Genaro ";
 	color: red;
-	background: yellow;
 }
+
+p::after {
+	content: " Pérez López";
+	color: blue;
+}
+
 /*
+
+Los psudoelementos after y before funcionan en en line y block
+
 Pseudoelementos
 Un pseudoelemento CSS se utiliza para diseñar partes específicas de un elemento.
 
