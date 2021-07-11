@@ -8,14 +8,14 @@ body {
 	background-color: #2a9d8f;
 }
 
-.contenedor{
+.caja1{
 	width: 60%;
 	height: 400px;
 	margin: auto;
 	margin-top: 20px;
-	overflow-y: scroll;
-	overflow-x: hidden;
 	border-radius: 20px;
+	background-color: aqua;
+	padding: 10px;
 }
 
 .contenedor h1 {
@@ -23,34 +23,37 @@ body {
 	margin-bottom: 10px;
 }
 
-.primario {
-	width: 100%;
-	background-color: #e9c46a;
-	padding: 20px;
+.caja1 p {
+	margin: auto;
+	text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
-.contenedor img {
-	margin-right: 10px;
-	width: 300px;
-	height: 200px;
-	float: left;
+.caja1 button {
+	width: 150px;
+	height: 70px;
+	background-color: brown;
+	border: 2px solid snow;
+	margin-left: 43%;
+}
+
+.caja1 button p {
+	color: snow;
+	margin: auto;
+}
+
+.caja1 button:hover {
+	background-color: blueviolet;
+	border-radius: 15px;
+	transition: 0.3s;
 }
 
 
 /*
-
-La floatpropiedad CSS especifica cómo debe flotar un elemento.
-La clearpropiedad CSS especifica qué elementos pueden flotar junto al elemento borrado y en qué lado.
-La floatpropiedad se utiliza para posicionar y dar formato al contenido, por ejemplo, dejar que una imagen flote a la izquierda del texto en un contenedor.
-
-La floatpropiedad puede tener uno de los siguientes valores:
-
-left - El elemento flota a la izquierda de su contenedor.
-right - El elemento flota a la derecha de su contenedor.
-none- El elemento no flota (se mostrará justo donde aparece en el texto). Esto es predeterminado
-inherit - El elemento hereda el valor flotante de su padre
-En su uso más simple, la floatpropiedad se puede utilizar para ajustar texto alrededor de imágenes.
-
-
+ la pseudoclase Hover escucha cuando el maouse este sobre
+ un elemento es especifico.
+ 
+ Funciona en todos los elementos. 
 
 */
