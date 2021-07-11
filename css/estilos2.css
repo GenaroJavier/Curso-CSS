@@ -4,43 +4,54 @@
 	font-weight: bold;
 }
 
+h1 {
+	padding: 10px;
+	text-align: center;
+}
+
 body {
 	background-color: #2a9d8f;
 }
 
+.caja1, .caja2 {
+	border: 2px solid white;
+}
+
 .caja1{
-	width: 60%;
-	height: 400px;
+	width: 20%;
+	height: 100px;
 	margin: auto;
 	margin-top: 20px;
 	border-radius: 20px;
 	background-color: aqua;
 	padding: 10px;
+	transition: all 1s;
 }
 
-.caja1 a {
-	margin: auto;
-    margin-top: 20px;
-	text-align: center;
-	margin-bottom: 10px;
-	display: block;
+.caja1:active {
+	background-color: green;
+	width: 90%;
+	height: 100px;
 }
 
-/*Con esta pseudo clase aplicamos estilos a los links que No hemos visitado*/
-a:link {
-	color: white;
+.caja2{
+	width: 20%;
+	height: 100px;
+	border-radius: 20px;
+	background-color: cadetblue;
+	padding: 10px;
+	transition: all 1s;
+	margin-left: 15px;
+	margin-top: 10px;
 }
 
-/*Con esta pseudo clase aplicamos estilos a los links que ya hemos visitado*/
-.caja1 a:visited {
-	color: red;
+.caja2:active {
+	background-color: coral;
+	width: 98%;
+	height: 100px;
 }
-
-
 /*
- la pseudoclase Hover escucha cuando el maouse este sobre
- un elemento es especifico.
- 
- Funciona en todos los elementos. 
-
+con Active
+al dejar presionado un elemento, se cambian los estilos
+unicamente mientras tenemos presionado dicho elemento. 
 */
