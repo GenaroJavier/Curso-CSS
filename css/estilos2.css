@@ -18,35 +18,22 @@ body {
 	padding: 10px;
 }
 
-.contenedor h1 {
+.caja1 a {
+	margin: auto;
+    margin-top: 20px;
 	text-align: center;
 	margin-bottom: 10px;
+	display: block;
 }
 
-.caja1 p {
-	margin: auto;
-	text-align: center;
-    margin-top: 20px;
-    margin-bottom: 10px;
+/*Con esta pseudo clase aplicamos estilos a los links que No hemos visitado*/
+a:link {
+	color: white;
 }
 
-.caja1 button {
-	width: 150px;
-	height: 70px;
-	background-color: brown;
-	border: 2px solid snow;
-	margin-left: 43%;
-}
-
-.caja1 button p {
-	color: snow;
-	margin: auto;
-}
-
-.caja1 button:hover {
-	background-color: blueviolet;
-	border-radius: 15px;
-	transition: 0.3s;
+/*Con esta pseudo clase aplicamos estilos a los links que ya hemos visitado*/
+.caja1 a:visited {
+	color: red;
 }
 
 
