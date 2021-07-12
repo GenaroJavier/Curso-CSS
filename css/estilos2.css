@@ -9,12 +9,13 @@ body {
 }
 
 .form {
-	width: 1200px;
+	width: 600px;
 	height: 400px;
 	margin: 25px;
 	border: 2px solid blue;
 	background-color: #f4a261;
-	display: flex;
+	margin: 50px auto;
+	overflow-y: auto;
 }
 
 .form img {
@@ -23,24 +24,17 @@ body {
 	object-fit: cover;
 }
 
+.form p {
+	font-size: 30px;
+	border: 2px solid snow;
+	border-radius: 10px;
+	text-align: center;
+	width: 50%;
+	margin: auto;
+	margin-top: 10px;
+}
+
 /*
-Object-Fit 
-Esta propiedad nos ayuda al momento de usar imagenes dentro
-de un contenedor, puesto que se puede generar distorciones 
-en las imagenes al momento de modificar las resoluciones
-cuenta con las siguientes propiedades:
-	-Contain: Las resoluciones de la img se ajustan al contenedor. (el valor que viene
-	por defecto)
-
-	-Cover: La imagen se ajusta al contenedor, recortando los sobrantes. Sin importar el
-	contenido.
-
-	-None: Pone las resoluciones originales de la img. Sin importar si no se ajustan al 
-	contenedor.
-
-	-Scale-Down: Elige la mejor resolución en base a dos aspectos: 
-	Se pregunta: 
-	Que es mas pequeño contain o none? 
-	Si none es mas chiquito dejo none
-	si contein es mas chiquito dejo contein 
+Cursor 
+Nos permite cambiar el estilo del cursor al posicionarlo sobre un elemento. 
 */
