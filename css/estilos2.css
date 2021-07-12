@@ -9,32 +9,38 @@ body {
 }
 
 .form {
-	width: 50%;
-	margin: 90px auto;
-	display: block;
+	width: 1200px;
+	height: 400px;
+	margin: 25px;
+	border: 2px solid blue;
 	background-color: #f4a261;
-	padding: 100px;
+	display: flex;
 }
 
-p, b{
-	color: white;
-	text-align: center;
-	display: inline-block;
-	font-size: 30px;
-	margin-top: -10px;
-}
-
-.form b::first-letter {
-	font-size: 50px;
-	font-weight: bold;
-}
-
-.form b:lang(en) {
-	color: black;
+.form img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 /*
-con Lang nos ayuda a identificar que parte de un texto esta en un idioma 
-permitiendo cambiar los estilos del texto en cuestión. 
+Object-Fit 
+Esta propiedad nos ayuda al momento de usar imagenes dentro
+de un contenedor, puesto que se puede generar distorciones 
+en las imagenes al momento de modificar las resoluciones
+cuenta con las siguientes propiedades:
+	-Contain: Las resoluciones de la img se ajustan al contenedor. (el valor que viene
+	por defecto)
 
+	-Cover: La imagen se ajusta al contenedor, recortando los sobrantes. Sin importar el
+	contenido.
+
+	-None: Pone las resoluciones originales de la img. Sin importar si no se ajustan al 
+	contenedor.
+
+	-Scale-Down: Elige la mejor resolución en base a dos aspectos: 
+	Se pregunta: 
+	Que es mas pequeño contain o none? 
+	Si none es mas chiquito dejo none
+	si contein es mas chiquito dejo contein 
 */
