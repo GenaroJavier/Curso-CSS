@@ -4,61 +4,37 @@
 	font-weight: bold;
 }
 
-h1 {
-	padding: 10px;
-	text-align: center;
-}
-
 body {
 	background-color: #2a9d8f;
 }
 
-.caja1{
-	width: 15%;
-	height: 30px;
-	margin: auto;
-	margin-top: 10px;
-	border-radius: 5px;
-	background-color: crimson;
-	transition: all 1s;
-	margin-left: 10px;
+.form {
+	width: 50%;
+	margin: 90px auto;
+	display: block;
+	background-color: #f4a261;
+	padding: 100px;
 }
 
-.caja1:focus {
-	background-color: darksalmon;
-	width: 17%;
-	height: 33px;
-}
-
-.caja2{
-	width: 15%;
-	height: 30px;
-	margin: auto;
-	margin-top: 10px;
-	border-radius: 5px;
-	background-color: dodgerblue;
-	transition: all 1s;
-}
-
-.caja2:focus {
-	background-color: cornflowerblue;
-	width: 17%;
-	height: 33px;
-}
-
-.caja1::placeholder {
+p, b{
 	color: white;
-	padding: 3px;
+	text-align: center;
+	display: inline-block;
+	font-size: 30px;
+	margin-top: -10px;
 }
 
-.caja2::placeholder {
-	color: white;
-	padding: 3px;
+.form b::first-letter {
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.form b:lang(en) {
+	color: black;
 }
 
 /*
-con focus
-puedo editar algun elemento mientras estemos editandolo, 
-por ejemplo el input, al momento en el que queramos escribir dentro,
-y nosotros clickemos dentro de el, se modificaran sus estilos segun se haya especificado. 
+con Lang nos ayuda a identificar que parte de un texto esta en un idioma 
+permitiendo cambiar los estilos del texto en cuestión. 
+
 */
