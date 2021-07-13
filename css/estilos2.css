@@ -21,7 +21,7 @@ h1 {
 	padding: 20px 0 10px 0;
 }
 
-.flex-item p{
+body p{
 	color: snow;
 }
 
@@ -34,8 +34,25 @@ h1 {
 	margin: 5px;
 }
 
+.flex-item-stretch {
+	border: 2px solid white;
+	color: #8d99ae;
+	width: 120px;
+	text-align: center;
+	margin: 5px;
+}
+
+.flex-item-start {
+	border: 2px solid white;
+	color: #8d99ae;
+	width: 120px;
+	text-align: center;
+	margin: 5px;
+}
+
 .flex-container {
-	width: 70%;
+	width: 80%;
+	height: 200px;
 	margin: auto;
 }
 
@@ -44,7 +61,8 @@ h1 {
 	background-color: #2b2d42;
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: center;
+	justify-content: space-evenly;
+	align-items: stretch;
 }
 
 .flex-container-2 {
@@ -52,7 +70,9 @@ h1 {
 	background-color: #2b2d42;
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: space-around;
+	justify-content: space-evenly;
+	align-items: center;
+	  
 }
 
 .flex-container-3 {
@@ -60,7 +80,9 @@ h1 {
 	background-color: #2b2d42;
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: space-between;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	  
 }
 
 .flex-container-4 {
@@ -69,6 +91,18 @@ h1 {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-evenly;
+	align-items: flex-end;
+	  
+}
+
+.flex-container-5 {
+	border: 2px solid #8d99ae;
+	background-color: #2b2d42;
+	display: flex;
+	flex-flow: row wrap-reverse;
+	justify-content: space-evenly;
+	align-items: baseline;
+	  
 }
 
 .item-1 {
@@ -79,14 +113,33 @@ h1 {
 	background: #00afb9;
 }
 
+@media only screen and (max-width: 1306px){
+	.flex-container {
+		width: 70%;
+		height: auto;
+		border: 2px solid #8d99ae;
+		background-color: #2b2d42;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-evenly;
+		align-content:space-between;
+	}
+}
+
+
+
 /*
-justify-content nosr sirve para alinear en el main axis
-Esta propiedad es para centrar el contenido, utilizando los siguientes valores: 
-- center (centra los elementos dentro del contenedor)
-- space-around (Es lo mismo que margin auto, Es darle un margen automatico a todas las casas)
-- space-between (Es dejar la mayor cantidad de espacio entre cajas, quiere que todas las cajas esten separadas a la misma distancia lo mas que se pueda)
-- space-evenly (Es mas o menos como margin auto pero se puede trabajar por item individual, tiene)
-entre otras
+Ahora que pasa si nosotros estamos alineando en el cross axis? 
+Para eso tenemos 2 propiedades con sus respectivos valores
+1.- Align-items (Esta propiedad se utiliza cuando hay una sola linea de items)
+	-flex-stretch
+	-flex-start (no es lo mismo que tener flex-stretch por que el stretch estira el item en el cross axiss)
+	-center
+	-flex-end
+	-baseline
+2.- Align-content (Y esta propiedad es para cuando hay mas de una)
+
+
 
 Flexbox
 Primero que nada hay que dejar bien en claro una cosa: 
