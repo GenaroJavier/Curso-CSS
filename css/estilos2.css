@@ -4,108 +4,85 @@
 }
 
 body {
-	background-color: #f1faee;
+	background-color: #a9d6e5;
 }
 
-.nav__ul {
-	background-color: #e63946;
+h1 {
+	padding: 20px;
 }
 
-.nav__li {
-	display: inline-block;
-	padding: 9px;
-	color: white;
+h1, h2 {
+	text-align: center;
+	color: #2b2d42;
 }
 
-.nav__li i {
-	color: #b7b7a4;
-	box-sizing: border-box;
-	margin-right: 5px;
-	text-align: right;
+.flex-container {
+	margin: 20px auto;
+	width: 70%;
+	border: 2px solid #8d99ae;
+	background-color: #2b2d42;
+	display: flex;
+	flex-direction: row;
 }
 
-
-.nav__li:hover{
-	background-color: #DA1B2B;
+.flex-item {
+	border: 2px solid white;
+	padding: 10px;
+	color: #8d99ae;
+	margin: 5px auto;
+	width: 120px;
+	height: 120px;
 }
 
-/*Menu 2 (para celulares)*/
-
-.nav__responsive-ul {
-	display: none;
+.flex-container-2 {
+	margin: 20px auto;
+	width: 70%;
+	border: 2px solid #8d99ae;
+	background-color: #2b2d42;
+	display: flex;
+	flex-direction: row-reverse;
 }
 
-
-.nav__responsive-button-container {
-	width: 100%;
-	position: absolute;
-	margin-top: -64px;
-	font-size: 25px;
-	background-color: #457b9d;
-	z-index: 100;
+.item-1 {
+	background-color: #fed9b7;
 }
 
-
-.nav__responsive-button {
-	padding: 6px 20px;
-	width: 100%;
-	text-align: right;
+.item-7 {
+	background-color: #00afb9;
 }
 
-@media only screen and (max-width: 550px){
-	.nav__ul {
-		display: none;
-	}
+/*
 
-	.nav {
-		height: 37px;
-		width: 100%;
-	}
+La propiedad de flex direction nos dice hacia que direccion queremos que se acomeden los
+items del contenedor. Si queremos que se dirijan en el cross axis o en main axis, si queremos
+que en este se acomoden en orden o si queremos que esten en reversa. 
 
-	.nav__responsive-ul {
-		display: block;
-		position: absolute;
-		width: 100%;
-		padding-top: 27px;
-		margin-top: 37px;
-		height: 37px;
-	}
+Flexbox
+Primero que nada hay que dejar bien en claro una cosa: 
+Esta propiedad requiere de dos cosas: 
+1.- un Flex-Container
+2.- un Flex item
 
-	.nav__li-container {
-		width: 90%;
-		position:relative;
-		top: -1000px;
-		height: calc(100vh - 64px);
-		background-color: #a8dadc;
-		transition: all 1s;
-		z-index: 1;
-	}
+Al utilizar un contenedor por defecto se comporta como un bloque, pero eso no quiere decir
+que nosotros vayamos a notar las cambios en el contenedor, al contrario esta función 
+afecta a lo que esta dentro del contenedor. (a sus hijos). 
 
-	.nav__responsive-li {
-		width: 100%;
-		padding: 9px 20px;
-	}
+Flex-box tiene dos ejes, como si se tratase de un plano cartesiano común, en esta 
+propiedad adquieren nombres diferentes. 
+1.- croos axis (eje y)
+2.- main axis (eje x)
 
-	.nav__responsive-li i {
-		color: #b7b7a4;
-		box-sizing: border-box;
-		text-align: center;
-		margin-right: 5px;
-		width: 30px;
-	}
+Ahora pon atención a esto como recordaras en un plano cartesiano hay unas flechitas 
+que nos dicen a que dirección se mueve un función por así decirlo, en este caso 
+es similar, el main axis empieza de lado izquiero (main-start) y termina en el lado
+derecho (main-end), por otro lado en el caso del cross axis podemos decir que 
+empieza desde arriba a esto le llamamos el (cross-start) y termina 
+abajo o lo que se llama el (cross-end)
 
-	.nav__responsive-li a {
-		text-decoration: none;
-	}
+Lo que hacemos con css, es cambiar el flujo
 
-	.nav__responsive-ul:hover > .nav__li-container {
-		top: -27px;	
-	}
+Los flex items son unicamente hijos directos, no se aplican a nietos por asi decirlo 
 
-	.nav__responsive-li:hover {
-		background-color: #557b9d;
-	}
-}
-
-/*Notas vh = viewport height o altura del viewport
-por si no masticas el ingles*/
+Esta propiedad procura mantener las resoluciones de altura para que estas sean iguales 
+en todos los items.
+*/
