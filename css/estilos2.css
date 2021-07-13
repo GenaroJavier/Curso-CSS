@@ -1,62 +1,111 @@
 * {
 	font-family: 'Quicksand', sans-serif;
-	font-size: 20px;
 	font-weight: bold;
 }
 
 body {
-	background-color: #2a9d8f;
+	background-color: #f1faee;
 }
 
+.nav__ul {
+	background-color: #e63946;
+}
 
-.form {
-	width: 48%;
-	border: 2px solid blue;
-	background-color: #f4a261;
+.nav__li {
 	display: inline-block;
-	padding: 20px;
-	margin-left: 10px;
-	margin-top: 20px;
-
+	padding: 9px;
+	color: white;
 }
 
-.form p {
-	font-size: 20px;
-}
-
-.form2{
-	width: 45%;
-	border: 2px solid blue;
-	background-color: #f4a261;
-	padding: 20px;
-	margin-left: 10px;
-	margin-top: 20px;
-	display: inline-block;
+.nav__li i {
+	color: #b7b7a4;
+	box-sizing: border-box;
+	margin-right: 5px;
+	text-align: right;
 }
 
 
+.nav__li:hover{
+	background-color: #DA1B2B;
+}
 
-@media only screen and (max-width: 800px){
-	.form {
+/*Menu 2 (para celulares)*/
+
+.nav__responsive-ul {
+	display: none;
+}
+
+
+.nav__responsive-button-container {
+	width: 100%;
+	position: absolute;
+	margin-top: -64px;
+	font-size: 25px;
+	background-color: #457b9d;
+	z-index: 100;
+}
+
+
+.nav__responsive-button {
+	padding: 6px 20px;
+	width: 100%;
+	text-align: right;
+}
+
+@media only screen and (max-width: 550px){
+	.nav__ul {
+		display: none;
+	}
+
+	.nav {
+		height: 37px;
 		width: 100%;
-		display: block;
-		margin: auto;
-		margin-top: 10px;
 	}
 
-	.form2 {
+	.nav__responsive-ul {
+		display: block;
+		position: absolute;
 		width: 100%;
-		display: block;
-		margin: auto;
-		margin-top: 10px;
+		padding-top: 27px;
+		margin-top: 37px;
+		height: 37px;
 	}
 
-	.form2 h1 {
-		color: white;
+	.nav__li-container {
+		width: 90%;
+		position:relative;
+		top: -1000px;
+		height: calc(100vh - 64px);
+		background-color: #a8dadc;
+		transition: all 1s;
+		z-index: 1;
+	}
+
+	.nav__responsive-li {
+		width: 100%;
+		padding: 9px 20px;
+	}
+
+	.nav__responsive-li i {
+		color: #b7b7a4;
+		box-sizing: border-box;
+		text-align: center;
+		margin-right: 5px;
+		width: 30px;
+	}
+
+	.nav__responsive-li a {
+		text-decoration: none;
+	}
+
+	.nav__responsive-ul:hover > .nav__li-container {
+		top: -27px;	
+	}
+
+	.nav__responsive-li:hover {
+		background-color: #557b9d;
 	}
 }
-/*
-@media 
-nos permite realizar cambios en los estilos con relacion en la resolución del dispositivo
-en el que se este desplegando la pag.
-*/
+
+/*Notas vh = viewport height o altura del viewport
+por si no masticas el ingles*/

@@ -9,22 +9,39 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+	<!--Iconos FontAwesome-->
+	<script src="https://kit.fontawesome.com/6766742454.js" crossorigin="anonymous"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-	<div class="form">
-		<h1>Titulo 1</h1>
-		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia in voluptatum fugit assumenda recusandae
-			ea iure provident, voluptatem ipsum dolorem magni praesentium maxime facere, quod animi deleniti rerum atque
-			officia.</p>
-	</div>
-	<div class="form2">
-		<h1>Titulo 2</h1>
-		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia in voluptatum fugit assumenda recusandae
-			ea iure provident, voluptatem ipsum dolorem magni praesentium maxime facere, quod animi deleniti rerum atque
-			officia.</p>
-	</div>
 </body>
+<nav class="nav">
+	<!--1er nav-->
+	<ul class="nav__ul">
+		<li class="nav__li"><i class="fas fa-home"></i><a href="#"></a>Inicio</li>
+		<li class="nav__li"><i class="fas fa-info-circle"></i><a href="#"></a>Sobre nosotros</li>
+		<li class="nav__li"><i class="fas fa-hand-holding-usd"></i><a href="#"></a>Gana dinero</li>
+		<li class="nav__li"><i class="fas fa-life-ring"></i><a href="#"></a>Ayuda</li>
+	</ul>
+
+	<!--2do nav-->
+
+	<!--Contenedor principal-->
+	<ul class="nav__responsive-ul">
+		<!--Contenedor para la barra del menu de desplazamiento-->
+		<div class="nav__responsive-button-container">
+			<!--Contenedor del boton-->
+			<div class="nav__responsive-button fas fa-bars"></div>
+		</div>
+		<!--Contenedor con los items del menu-->
+			<div class="nav__li-container">
+				<li class="nav__responsive-li"><i class="fas fa-home"></i><a href="#"></a>Inicio</li>
+				<li class="nav__responsive-li"><i class="fas fa-info-circle"></i><a href="#"></a>Sobre nosotros</li>
+				<li class="nav__responsive-li"><i class="fas fa-hand-holding-usd"></i><a href="#"></a>Gana dinero</li>
+				<li class="nav__responsive-li"><i class="fas fa-life-ring"></i><a href="#"></a>Ayuda</li>
+		</div>
+	</ul>
+</nav>
 
 </html>
