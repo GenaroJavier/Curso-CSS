@@ -16,22 +16,28 @@ h1, h2 {
 	color: #2b2d42;
 }
 
+.flex-item p{
+	color: snow;
+}
+
 .flex-container {
 	margin: 20px auto;
 	width: 70%;
+	height: 50%;
 	border: 2px solid #8d99ae;
 	background-color: #2b2d42;
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 .flex-item {
 	border: 2px solid white;
-	padding: 10px;
 	color: #8d99ae;
-	margin: 5px auto;
 	width: 120px;
 	height: 120px;
+	text-align: center;
+	margin: 5px;
 }
 
 .flex-container-2 {
@@ -41,21 +47,24 @@ h1, h2 {
 	background-color: #2b2d42;
 	display: flex;
 	flex-direction: row-reverse;
+	flex-wrap: wrap;
+
 }
 
 .item-1 {
-	background-color: #fed9b7;
+	background: #01497c;
 }
 
-.item-7 {
-	background-color: #00afb9;
+.item-7{
+	background: #00afb9;
 }
 
 /*
 
-La propiedad de flex direction nos dice hacia que direccion queremos que se acomeden los
-items del contenedor. Si queremos que se dirijan en el cross axis o en main axis, si queremos
-que en este se acomoden en orden o si queremos que esten en reversa. 
+La propiedad de flex-wrap nos permite mantener las resoluciones de los hijos y que estas
+no se vean afectadas por el cambio de resolución del contenedor, para esto se auto 
+ajustan en el contenedor y cambian de posición relativamente. 
+
 
 Flexbox
 Primero que nada hay que dejar bien en claro una cosa: 
