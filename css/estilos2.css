@@ -27,8 +27,7 @@ h1, h2 {
 	border: 2px solid #8d99ae;
 	background-color: #2b2d42;
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	flex-flow: row wrap;
 }
 
 .flex-item {
@@ -46,8 +45,7 @@ h1, h2 {
 	border: 2px solid #8d99ae;
 	background-color: #2b2d42;
 	display: flex;
-	flex-direction: row-reverse;
-	flex-wrap: wrap;
+	flex-flow: column-reverse wrap;
 
 }
 
@@ -61,9 +59,8 @@ h1, h2 {
 
 /*
 
-La propiedad de flex-wrap nos permite mantener las resoluciones de los hijos y que estas
-no se vean afectadas por el cambio de resolución del contenedor, para esto se auto 
-ajustan en el contenedor y cambian de posición relativamente. 
+Con la propiedad de flex-flow podemos modificar las propiedades de flex-direction
+y flex-wrap en ese orden. 
 
 
 Flexbox
