@@ -7,27 +7,22 @@ body {
 	background-color: #a9d6e5;
 }
 
-h1 {
-	padding: 20px;
-}
-
 h1, h2 {
 	text-align: center;
 	color: #2b2d42;
 }
 
-.flex-item p{
-	color: snow;
+h1 {
+	padding: 10px 0 0 0;
+	font-weight: 900;
 }
 
-.flex-container {
-	margin: 20px auto;
-	width: 70%;
-	height: 50%;
-	border: 2px solid #8d99ae;
-	background-color: #2b2d42;
-	display: flex;
-	flex-flow: row wrap;
+.sub-container {
+	padding: 20px 0 10px 0;
+}
+
+.flex-item p{
+	color: snow;
 }
 
 .flex-item {
@@ -39,14 +34,41 @@ h1, h2 {
 	margin: 5px;
 }
 
-.flex-container-2 {
-	margin: 20px auto;
+.flex-container {
 	width: 70%;
+	margin: auto;
+}
+
+.flex-container-1 {
 	border: 2px solid #8d99ae;
 	background-color: #2b2d42;
 	display: flex;
-	flex-flow: column-reverse wrap;
+	flex-flow: row wrap;
+	justify-content: center;
+}
 
+.flex-container-2 {
+	border: 2px solid #8d99ae;
+	background-color: #2b2d42;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+.flex-container-3 {
+	border: 2px solid #8d99ae;
+	background-color: #2b2d42;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.flex-container-4 {
+	border: 2px solid #8d99ae;
+	background-color: #2b2d42;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
 }
 
 .item-1 {
@@ -58,10 +80,13 @@ h1, h2 {
 }
 
 /*
-
-Con la propiedad de flex-flow podemos modificar las propiedades de flex-direction
-y flex-wrap en ese orden. 
-
+justify-content nosr sirve para alinear en el main axis
+Esta propiedad es para centrar el contenido, utilizando los siguientes valores: 
+- center (centra los elementos dentro del contenedor)
+- space-around (Es lo mismo que margin auto, Es darle un margen automatico a todas las casas)
+- space-between (Es dejar la mayor cantidad de espacio entre cajas, quiere que todas las cajas esten separadas a la misma distancia lo mas que se pueda)
+- space-evenly (Es mas o menos como margin auto pero se puede trabajar por item individual, tiene)
+entre otras
 
 Flexbox
 Primero que nada hay que dejar bien en claro una cosa: 
