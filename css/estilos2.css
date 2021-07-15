@@ -21,126 +21,202 @@ h1 {
 	padding: 20px 0 10px 0;
 }
 
-body p{
-	color: snow;
-}
-
 .flex-item {
 	border: 2px solid white;
 	color: #8d99ae;
 	width: 120px;
 	height: 120px;
-	text-align: center;
 	margin: 5px;
-}
-
-.flex-item-stretch {
-	border: 2px solid white;
-	color: #8d99ae;
-	width: 120px;
-	text-align: center;
-	margin: 5px;
-}
-
-.flex-item-start {
-	border: 2px solid white;
-	color: #8d99ae;
-	width: 120px;
-	text-align: center;
-	margin: 5px;
-}
-
-.flex-container {
-	width: 80%;
-	height: 200px;
-	margin: auto;
-}
-
-.flex-container-1 {
-	border: 2px solid #8d99ae;
-	background-color: #2b2d42;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-evenly;
-	align-items: stretch;
-}
-
-.flex-container-2 {
-	border: 2px solid #8d99ae;
-	background-color: #2b2d42;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-evenly;
-	align-items: center;
-	  
-}
-
-.flex-container-3 {
-	border: 2px solid #8d99ae;
-	background-color: #2b2d42;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-evenly;
-	align-items: flex-start;
-	  
-}
-
-.flex-container-4 {
-	border: 2px solid #8d99ae;
-	background-color: #2b2d42;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-evenly;
-	align-items: flex-end;
-	  
-}
-
-.flex-container-5 {
-	border: 2px solid #8d99ae;
-	background-color: #2b2d42;
-	display: flex;
-	flex-flow: row wrap-reverse;
-	justify-content: space-evenly;
-	align-items: baseline;
-	  
 }
 
 .item-1 {
 	background: #01497c;
 }
 
-.item-7{
+.item-7 {
 	background: #00afb9;
 }
 
-@media only screen and (max-width: 1306px){
-	.flex-container {
-		width: 70%;
-		height: auto;
-		border: 2px solid #8d99ae;
-		background-color: #2b2d42;
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: space-evenly;
-		align-content:space-between;
-	}
+.flex-container {
+	width: 80%;
+	height: 200px;
+	margin: auto;
+	border: 2px solid #8d99ae;
+	background-color: #2b2d42;
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+.flex-item p {
+	display: flex;
+	color: white;
+	justify-content: space-evenly;
+	margin-top: 45px;
+}
+
+.flex-container-1 .flex-item{
+	align-self: center;
+}
+
+.flex-container-2 {
+	align-self: flex-end;
+}
+
+.fc2-item-1, .fc2-item-7{
+	align-self: flex-end;
+}
+
+.flex-container-3 .item-1 {
+	margin-left: auto;
+}
+
+.flex-container-3 .item-2 {
+	margin: auto;
+	background-color: #fca311;
+}
+
+.flex-container-3 .item-3 {
+	margin-right: auto;
+	background-color: #d62828;
+}
+/*Flex-grow*/
+
+.flex-container-4 {
+	align-items: center;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+}
+
+.flex-container-4-1 .flex-item{
+	flex-grow: 1;
+}
+
+.flex-container-4-2 .item-1{
+	flex-grow: 1;
 }
 
 
+.flex-container-4-2 .item-7{
+	flex-grow: 1;
+}
+
+.flex-container-4-3 .item-1{
+	flex-grow: 1;
+}
+
+
+.flex-container-4-3 .item-7{
+	flex-grow: 2;
+}
+
+.flex-container-5 {
+	flex-wrap: nowrap;
+	justify-items: center;
+}
+
+.flex-container-5 .flex-item {
+	align-self: center;
+	flex-grow: 2;
+}
+
+.flex-container-5 .item-1 {
+	flex-shrink: 5; 
+}
+
+.flex-container-6 {
+	flex-wrap: nowrap;
+}
+
+.flex-container-6 .flex-item{
+	align-self: center;
+}
+
+.flex-container-6 .item-1 {
+	flex-basis: 20%;
+}
+
+/*Flex-order*/
+
+.flex-container-7, .flex-container-7-v2 {
+	flex-wrap: nowrap;
+}
+
+.flex-container-7, .flex-container-7-v2, .flex-item{
+	align-self: center;
+}
+
+.flex-container-7-v2 {
+	flex-direction: row-reverse;
+}
+
+/*Flex order*/
+.flex-container-7 .item-1, .flex-container-7-v2  .item-1 {
+	order: 1;
+}
+
+.flex-container-7 .item-2, .flex-container-7-v2  .item-2 {
+	order: 2;
+	background-color: #2d6a4f;
+}
+
+.flex-container-7 .item-3, .flex-container-7-v2  .item-3 {
+	order: 4;
+	background-color: #6c757d;
+}
+
+.flex-container-7 .item-7, .flex-container-7-v2  .item-7 {
+	order: 3;
+}
+
+/*Flex*/
+
+.flex-container-8 {
+	flex-wrap: nowrap;
+}
+
+.flex-container-8 .flex-item{ 
+	margin: 0;
+	flex: 1 0 120px;
+}
+
+.flex-container-8 .item-1 {
+	flex: 2 0 150px;
+}
+
 
 /*
-Ahora que pasa si nosotros estamos alineando en el cross axis? 
-Para eso tenemos 2 propiedades con sus respectivos valores
-1.- Align-items (Esta propiedad se utiliza cuando hay una sola linea de items)
-	-flex-stretch
-	-flex-start (no es lo mismo que tener flex-stretch por que el stretch estira el item en el cross axiss)
-	-center
-	-flex-end
-	-baseline
-2.- Align-content (Y esta propiedad es para cuando hay mas de una)
+Los flex-items tambien tienen sus respctivas propiedades reservadas, como las siguientes:
+	- Align-self (Alineación en el cross-axis)
 
+	-Margin (Margin tiene un comportamiento especial en el uso de flex, puesto que
+	poniendo de ejemplo ponemos un margin-top: auto; nuestro item automaticamente
+	se nos desplazara hacia abajo, quiere decir que se ira al lado opuesto al que nosotros
+	le estamos asignando).
 
+	-Flex-grow (Reparte el espacio que sobra, dependiendo del contenedor y el numero que
+	le asignamos es el número de cachitos que se le asigna) 
+	Nota: se le empieza a repartir el espacio una vez que las cajas ya tengan su resolución
+	asignada. 
 
+	-Flex-shrink (Al momento de ir cambiando las resoluciones de un contendor, los elementos
+	van a ir aumentando o disminuyendo sus resoluciones, entonces que pasa si nosotros queremos
+	que en especial un item se desminuya más que los otros)
+	Nota: Funciona con valores mayores a 1 por que por defecto todas las cajas ya tienen 1
+
+	-Flex-basis (Esta propiedad es como el width aunque tiene mas importancia que este
+	cuando digo que es como el with es por que al igual que este modifica el ancho del
+	elemento)
+
+	-Flex (Esta propiedad agrupa las propiedades anteiores en el siguiente orden
+	flex-grow flex-shrink flex-basis)
+
+	-Order (Es como el z index, por ejemplo si nosotros tenemos un flex-direction: 
+	row apuntaria en el eje del main axis pero si tenemos flex-direction: column 
+	apuntaria en el eje del cross axis)
+*/
+
+/*
 Flexbox
 Primero que nada hay que dejar bien en claro una cosa: 
 Esta propiedad requiere de dos cosas: 

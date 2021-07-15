@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Propiedades de Texto</title>
+	<title>Flex</title>
 	<link rel="stylesheet" type="text/css" href="css/estilos2.css">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<!--Fuentes-->
@@ -16,97 +16,137 @@
 
 <body>
 	<h1>FlexBox</h1>
-	<h2>Align-items</h2>
+	<h2>Propiedades Flex-items</h2>
 
-	<h2 class="sub-container">stretch</h2>
+	<h2 class="sub-container">Align-self</h2>
 	<div class="flex-container flex-container-1">
-		<div class="flex-item-stretch item-1"><p>Caja Flexible</p>
+		<div class="flex-item item-1"><p>Caja Flexible</p>
 		</div>
-		<div class="flex-item-stretch"><p>Caja Flexible</p>
+		<div class="flex-item "><p>Caja Flexible</p>
 		</div>
-		<div class="flex-item-stretch"><p>Caja Flexible</p>
+		<div class="flex-item "><p>Caja Flexible</p>
 		</div>
-		<div class="flex-item-stretch"><p>Caja Flexible</p>
+		<div class="flex-item "><p>Caja Flexible</p>
 		</div>
-		<div class="flex-item-stretch"><p>Caja Flexible</p>
+		<div class="flex-item "><p>Caja Flexible</p>
 		</div>
-		<div class="flex-item-stretch"><p>Caja Flexible</p>
+		<div class="flex-item "><p>Caja Flexible</p>
 		</div>
-		<div class="flex-item-stretch item-7"><p>Caja Flexible</p>
+		<div class="flex-item  item-7"><p>Caja Flexible</p>
 		</div>
 	</div>
 
-	<h2 class="sub-container">center</h2>
+	<h2 class="sub-container">flex-end</h2>
 	<div class="flex-container flex-container-2">
-		<div class="flex-item item-1"><p>Caja Flexible</p>
+		<div class="flex-item item-1 fc2-item-1"><p>Caja Flexible</p>
 		</div>
-		<div class="flex-item"><p>Caja Flexible</p>
+		<div class="flex-item "><p>Caja Flexible</p>
 		</div>
-		<div class="flex-item"><p>Caja Flexible</p>
+		<div class="flex-item "><p>Caja Flexible</p>
 		</div>
-		<div class="flex-item"><p>Caja Flexible</p>
+		<div class="flex-item "><p>Caja Flexible</p>
 		</div>
-		<div class="flex-item"><p>Caja Flexible</p>
+		<div class="flex-item "><p>Caja Flexible</p>
 		</div>
-		<div class="flex-item"><p>Caja Flexible</p>
-		</div>
-		<div class="flex-item item-7"><p>Caja Flexible</p>
+		<div class="flex-item "><p>Caja Flexible</p></div>
+		<div class="flex-item  item-7 fc2-item-7"><p>Caja Flexible</p>
 		</div>
 	</div>
 
-	<h2 class="sub-container">Flex-start</h2>
+	<h2 class="sub-container">Margin</h2>
 	<div class="flex-container flex-container-3">
-		<div class="flex-item-start item-1"><p>Caja Flexible</p>
-		</div>
-		<div class="flex-item-start"><p>Caja Flexible</p>
-		</div>
-		<div class="flex-item-start"><p>Caja Flexible</p>
-		</div>
-		<div class="flex-item-start"><p>Caja Flexible</p>
-		</div>
-		<div class="flex-item-start"><p>Caja Flexible</p>
-		</div>
-		<div class="flex-item-start"><p>Caja Flexible</p>
-		</div>
-		<div class="flex-item-start item-7"><p>Caja Flexible</p>
-		</div>
+			<div class="flex-item "><p>Caja Flexible</p></div>
+			<div class="flex-item "><p>Caja Flexible</p></div>
+			<div class="flex-item item-1"><p>Caja Flexible</p></div>
+			<div class="flex-item item-2"><p>Caja Flexible</p></div>
+			<div class="flex-item item-3"><p>Caja Flexible</p></div>
+			<div class="flex-item "><p>Caja Flexible</p></div>
+			<div class="flex-item "><p>Caja Flexible</p></div>
 	</div>
 
-	<h2 class="sub-container">Flex-end</h2>
-	<div class="flex-container flex-container-4">
+	<!--Flex Wrog-->
+
+	<h2 class="sub-container">Flex-grow</h2>
+	<div class="flex-container flex-container-4 flex-container-4-1">
+		<div class="flex-item item-1"><p>Caja Flexible</p></div>
+		<div class="flex-item "><p>Caja Flexible</p></div>
+		<div class="flex-item  item-7"><p>Caja Flexible</p></div>
+	</div>
+
+	<div class="flex-container flex-container-4 flex-container-4-2">
 		<div class="flex-item item-1"><p>Caja Flexible</p>
 		</div>
-		<div class="flex-item"><p>Caja Flexible</p>
+		<div class="flex-item "><p>Caja Flexible</p>
 		</div>
-		<div class="flex-item"><p>Caja Flexible</p>
-		</div>
-		<div class="flex-item"><p>Caja Flexible</p>
-		</div>
-		<div class="flex-item"><p>Caja Flexible</p>
-		</div>
-		<div class="flex-item"><p>Caja Flexible</p>
-		</div>
-		<div class="flex-item item-7"><p>Caja Flexible</p>
+		<div class="flex-item  item-7"><p>Caja Flexible</p>
 		</div>
 	</div>
 
-	<h2 class="sub-container">Baseline</h2>
+
+	<div class="flex-container flex-container-4 flex-container-4-3">
+		<div class="flex-item item-1" atrib=""><p>Caja Flexible</p>
+		</div>
+		<div class="flex-item "><p>Caja Flexible</p>
+		</div>
+		<div class="flex-item  item-7" atrib=""><p>Caja Flexible</p>
+		</div>
+	</div>
+	
+	<h2 class="sub-container">Flex-shrink</h2>
 	<div class="flex-container flex-container-5">
-		<div class="flex-item item-1"><p>Caja Flexible</p>
-		</div>
-		<div class="flex-item"><p>Caja Flexible</p>
-		</div>
-		<div class="flex-item"><p>Caja Flexible</p>
-		</div>
-		<div class="flex-item"><p>Caja Flexible</p>
-		</div>
-		<div class="flex-item"><p>Caja Flexible</p>
-		</div>
-		<div class="flex-item"><p>Caja Flexible</p>
-		</div>
-		<div class="flex-item item-7"><p>Caja Flexible</p>
+		<div class="flex-item item-1"><p>Caja Flexible</p></div>
+		<div class="flex-item "><p>Caja Flexible</p></div>
+		<div class="flex-item "><p>Caja Flexible</p></div>
+		<div class="flex-item "><p>Caja Flexible</p></div>
+		<div class="flex-item "><p>Caja Flexible</p></div>
+		<div class="flex-item "><p>Caja Flexible</p></div>
+		<div class="flex-item "><p>Caja Flexible</p></div>
+		<div class="flex-item "><p>Caja Flexible</p></div>
+		<div class="flex-item  item-7"><p>Caja Flexible</p>
 		</div>
 	</div>
 
+	<h2 class="sub-container">Flex-basis</h2>
+	<div class="flex-container flex-container-6">
+		<div class="flex-item item-1"><p>Caja Flexible</p></div>
+		<div class="flex-item "><p>Caja Flexible</p></div>
+		<div class="flex-item "><p>Caja Flexible</p></div>
+		<div class="flex-item "><p>Caja Flexible</p></div>
+		<div class="flex-item "><p>Caja Flexible</p></div>
+		<div class="flex-item "><p>Caja Flexible</p></div>
+		<div class="flex-item  item-7"><p>Caja Flexible</p></div>
+	</div>
+
+	<h2 class="sub-container">Flex-order</h2>
+	<div class="flex-container flex-container-7">
+		<div class="flex-item item-1"><p>Caja Flexible</p></div>
+		<div class="flex-item item-2"><p>Caja Flexible</p></div>
+		<div class="flex-item item-3"><p>Caja Flexible</p></div>
+		<div class="flex-item"><p>Caja Flexible</p></div>
+		<div class="flex-item"><p>Caja Flexible</p></div>
+		<div class="flex-item"><p>Caja Flexible</p></div>
+		<div class="flex-item  item-7"><p>Caja Flexible</p></div>
+	</div>
+	<br>
+	<div class="flex-container flex-container-7-v2">
+		<div class="flex-item item-1"><p>Caja Flexible</p></div>
+		<div class="flex-item item-2"><p>Caja Flexible</p></div>
+		<div class="flex-item item-3"><p>Caja Flexible</p></div>
+		<div class="flex-item"><p>Caja Flexible</p></div>
+		<div class="flex-item"><p>Caja Flexible</p></div>
+		<div class="flex-item"><p>Caja Flexible</p></div>
+		<div class="flex-item  item-7"><p>Caja Flexible</p></div>
+	</div>
+	<h2 class="sub-container">Flex</h2>
+	<div class="flex-container flex-container-8">
+		<div class="flex-item item-1"><p>Caja Flexible</p></div>
+		<div class="flex-item item-2"><p>Caja Flexible</p></div>
+		<div class="flex-item item-3"><p>Caja Flexible</p></div>
+		<div class="flex-item"><p>Caja Flexible</p></div>
+		<div class="flex-item"><p>Caja Flexible</p></div>
+		<div class="flex-item"><p>Caja Flexible</p></div>
+		<div class="flex-item  item-7"><p>Caja Flexible</p></div>
+	</div>
+	<br>
 </body>
 </html>
