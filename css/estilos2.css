@@ -4,245 +4,95 @@
 }
 
 body {
-	background-color: #a9d6e5;
-}
-
-h1, h2 {
-	text-align: center;
-	color: #2b2d42;
-}
-
-h1 {
-	padding: 10px 0 0 0;
-	font-weight: 900;
-}
-
-.sub-container {
-	padding: 20px 0 10px 0;
-}
-
-.flex-item {
-	border: 2px solid white;
-	color: #8d99ae;
-	width: 120px;
-	height: 120px;
-	margin: 5px;
-}
-
-.item-1 {
-	background: #01497c;
-}
-
-.item-7 {
-	background: #00afb9;
+	background-color: #252422;
 }
 
 .flex-container {
-	width: 80%;
-	height: 200px;
-	margin: auto;
-	border: 2px solid #8d99ae;
-	background-color: #2b2d42;
+	width: 60%;
 	display: flex;
-	justify-content: space-evenly;
-	flex-wrap: wrap;
-}
-
-.flex-item p {
-	display: flex;
-	color: white;
-	justify-content: space-evenly;
-	margin-top: 45px;
-}
-
-.flex-container-1 .flex-item{
-	align-self: center;
-}
-
-.flex-container-2 {
-	align-self: flex-end;
-}
-
-.fc2-item-1, .fc2-item-7{
-	align-self: flex-end;
-}
-
-.flex-container-3 .item-1 {
-	margin-left: auto;
-}
-
-.flex-container-3 .item-2 {
-	margin: auto;
-	background-color: #fca311;
-}
-
-.flex-container-3 .item-3 {
-	margin-right: auto;
-	background-color: #d62828;
-}
-/*Flex-grow*/
-
-.flex-container-4 {
 	align-items: center;
 	flex-wrap: wrap;
-	margin-bottom: 20px;
+	background-color: #403d39;
+	margin: auto;
+	margin-top: 10%;
+	border: 1px solid #fffcf2;
 }
 
-.flex-container-4-1 .flex-item{
-	flex-grow: 1;
+.flex-container .form, .form-img {
+	justify-content: space-evenly;
+	flex-wrap: wrap;
 }
 
-.flex-container-4-2 .item-1{
-	flex-grow: 1;
+.flex-container .form {
+	width: 70%;
+	text-align: center;
+	margin: auto;
+	order: 2;
+}
+
+.form-input {
+	width: 100%;
+	padding: 7px;
+	margin: 6px 0;
+	border: none;
+	border-bottom: 3px solid #2E2C29;
+	background-color: #403d39;
+	color: #b7b7a4;
+}
+
+.form-input:hover {
+	background-color: #504C47;
+	color: white;
+	border-bottom: 3px solid white;
+}
+
+.form-input:focus {
+	/*Es como un degradado al darle click en el input*/
+	background: linear-gradient(to bottom, transparent, #2E2C29);
+	outline: none;
+	border-bottom: 3px solid white;
 }
 
 
-.flex-container-4-2 .item-7{
-	flex-grow: 1;
+.form textarea {
+	min-height: 140px;
+	resize: none;
 }
 
-.flex-container-4-3 .item-1{
-	flex-grow: 1;
+.form-img {
+	padding: 10px;
+	display: flex;
+	border-radius: 20px;
+	margin: auto;
 }
 
-
-.flex-container-4-3 .item-7{
-	flex-grow: 2;
-}
-
-.flex-container-5 {
-	flex-wrap: nowrap;
-	justify-items: center;
-}
-
-.flex-container-5 .flex-item {
-	align-self: center;
-	flex-grow: 2;
-}
-
-.flex-container-5 .item-1 {
-	flex-shrink: 5; 
-}
-
-.flex-container-6 {
-	flex-wrap: nowrap;
-}
-
-.flex-container-6 .flex-item{
-	align-self: center;
-}
-
-.flex-container-6 .item-1 {
-	flex-basis: 20%;
-}
-
-/*Flex-order*/
-
-.flex-container-7, .flex-container-7-v2 {
-	flex-wrap: nowrap;
-}
-
-.flex-container-7, .flex-container-7-v2, .flex-item{
-	align-self: center;
-}
-
-.flex-container-7-v2 {
-	flex-direction: row-reverse;
-}
-
-/*Flex order*/
-.flex-container-7 .item-1, .flex-container-7-v2  .item-1 {
+.container-img {
+	padding: 10px;
+	display: flex;
+	background-color: #ccc5b9;
+	border-radius: 50%;
+	flex-wrap: wrap;
+	border: 2px solid #fffcf2;
+	max-width: 200px;
+	min-width: 50px;
 	order: 1;
 }
 
-.flex-container-7 .item-2, .flex-container-7-v2  .item-2 {
-	order: 2;
-	background-color: #2d6a4f;
+.form-img img {
+	width: 100%;
+	height: 100%;
+	padding: 20px;
 }
 
-.flex-container-7 .item-3, .flex-container-7-v2  .item-3 {
-	order: 4;
-	background-color: #6c757d;
+.form input[type="submit"] {
+	background-color: #2E2C29;
+	color: white;
+	border-bottom: none;
+	padding: 15px;
+	width: 50%;
 }
 
-.flex-container-7 .item-7, .flex-container-7-v2  .item-7 {
-	order: 3;
+.form input[type="submit"]:hover {
+	background-color: #403d39;
+	outline: 3px solid #2E2C29;
 }
-
-/*Flex*/
-
-.flex-container-8 {
-	flex-wrap: nowrap;
-}
-
-.flex-container-8 .flex-item{ 
-	margin: 0;
-	flex: 1 0 120px;
-}
-
-.flex-container-8 .item-1 {
-	flex: 2 0 150px;
-}
-
-
-/*
-Los flex-items tambien tienen sus respctivas propiedades reservadas, como las siguientes:
-	- Align-self (Alineación en el cross-axis)
-
-	-Margin (Margin tiene un comportamiento especial en el uso de flex, puesto que
-	poniendo de ejemplo ponemos un margin-top: auto; nuestro item automaticamente
-	se nos desplazara hacia abajo, quiere decir que se ira al lado opuesto al que nosotros
-	le estamos asignando).
-
-	-Flex-grow (Reparte el espacio que sobra, dependiendo del contenedor y el numero que
-	le asignamos es el número de cachitos que se le asigna) 
-	Nota: se le empieza a repartir el espacio una vez que las cajas ya tengan su resolución
-	asignada. 
-
-	-Flex-shrink (Al momento de ir cambiando las resoluciones de un contendor, los elementos
-	van a ir aumentando o disminuyendo sus resoluciones, entonces que pasa si nosotros queremos
-	que en especial un item se desminuya más que los otros)
-	Nota: Funciona con valores mayores a 1 por que por defecto todas las cajas ya tienen 1
-
-	-Flex-basis (Esta propiedad es como el width aunque tiene mas importancia que este
-	cuando digo que es como el with es por que al igual que este modifica el ancho del
-	elemento)
-
-	-Flex (Esta propiedad agrupa las propiedades anteiores en el siguiente orden
-	flex-grow flex-shrink flex-basis)
-
-	-Order (Es como el z index, por ejemplo si nosotros tenemos un flex-direction: 
-	row apuntaria en el eje del main axis pero si tenemos flex-direction: column 
-	apuntaria en el eje del cross axis)
-*/
-
-/*
-Flexbox
-Primero que nada hay que dejar bien en claro una cosa: 
-Esta propiedad requiere de dos cosas: 
-1.- un Flex-Container
-2.- un Flex item
-
-Al utilizar un contenedor por defecto se comporta como un bloque, pero eso no quiere decir
-que nosotros vayamos a notar las cambios en el contenedor, al contrario esta función 
-afecta a lo que esta dentro del contenedor. (a sus hijos). 
-
-Flex-box tiene dos ejes, como si se tratase de un plano cartesiano común, en esta 
-propiedad adquieren nombres diferentes. 
-1.- croos axis (eje y)
-2.- main axis (eje x)
-
-Ahora pon atención a esto como recordaras en un plano cartesiano hay unas flechitas 
-que nos dicen a que dirección se mueve un función por así decirlo, en este caso 
-es similar, el main axis empieza de lado izquiero (main-start) y termina en el lado
-derecho (main-end), por otro lado en el caso del cross axis podemos decir que 
-empieza desde arriba a esto le llamamos el (cross-start) y termina 
-abajo o lo que se llama el (cross-end)
-
-Lo que hacemos con css, es cambiar el flujo
-
-Los flex items son unicamente hijos directos, no se aplican a nietos por asi decirlo 
-
-Esta propiedad procura mantener las resoluciones de altura para que estas sean iguales 
-en todos los items.
-*/
