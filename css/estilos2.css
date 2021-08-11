@@ -4,95 +4,39 @@
 }
 
 body {
-	background-color: #252422;
-}
-
-.flex-container {
-	width: 60%;
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	background-color: #403d39;
-	margin: auto;
-	margin-top: 10%;
-	border: 1px solid #fffcf2;
-}
-
-.flex-container .form, .form-img {
-	justify-content: space-evenly;
-	flex-wrap: wrap;
-}
-
-.flex-container .form {
-	width: 70%;
-	text-align: center;
-	margin: auto;
-	order: 2;
-}
-
-.form-input {
-	width: 100%;
-	padding: 7px;
-	margin: 6px 0;
-	border: none;
-	border-bottom: 3px solid #2E2C29;
-	background-color: #403d39;
-	color: #b7b7a4;
-}
-
-.form-input:hover {
-	background-color: #504C47;
-	color: white;
-	border-bottom: 3px solid white;
-}
-
-.form-input:focus {
-	/*Es como un degradado al darle click en el input*/
-	background: linear-gradient(to bottom, transparent, #2E2C29);
-	outline: none;
-	border-bottom: 3px solid white;
-}
-
-
-.form textarea {
-	min-height: 140px;
-	resize: none;
-}
-
-.form-img {
-	padding: 10px;
-	display: flex;
-	border-radius: 20px;
-	margin: auto;
-}
-
-.container-img {
-	padding: 10px;
-	display: flex;
-	background-color: #ccc5b9;
-	border-radius: 50%;
-	flex-wrap: wrap;
-	border: 2px solid #fffcf2;
-	max-width: 200px;
-	min-width: 50px;
-	order: 1;
-}
-
-.form-img img {
-	width: 100%;
-	height: 100%;
-	padding: 20px;
-}
-
-.form input[type="submit"] {
-	background-color: #2E2C29;
-	color: white;
-	border-bottom: none;
+	background: radial-gradient(circle, #fff,#ccc);
 	padding: 15px;
-	width: 50%;
 }
 
-.form input[type="submit"]:hover {
-	background-color: #403d39;
-	outline: 3px solid #2E2C29;
+.grid-container {
+	padding: 10px;
+	width: min-content;
+	margin: auto;
+	display: grid;
+	grid-template-rows: repeat(3, 150px); /*Con esta propiedad especificamos el tamaño de una columana ademas de esepecificar el numero de estas*/
+	grid-template-columns: repeat(3, 150px); /*Sucede basicamente lo mismo, pero ahora con columnas*/
+	border: 3px solid #000;
+	background-color: teal;
+	grid-gap: 10px;
 }
+.grid-item {
+	border: 1px solid #000;
+	background-color: tan;
+}
+
+/*
+Notas: 
+Podemos hacer que una columna quede fija o no, con la unidad fr logramos que un elemento 
+puedar ir tomando una resolución mayor o menor dependiendo del contenedor. 
+
+grid-gap: 10px; Con esta propiedad lo que hacemos es asignarle un margen interno a los items 
+grid-gap, podemos moficar el comportamiento de esta funcion, por ejemplo con la función 
+grid-row-gap, podemos hacer que el espacio solo sea entre columnas o viserversa con grid-column-gap
+
+ repeat(7, 150px) repeat(cuantas veces repito, que repito) Con esta funcion podemos 
+ especificar el numero de columnas y filas en nuestro contenedor. 
+
+ Hay que saber diferenciar entre grid implicito y grid explicito. 
+
+
+*/
