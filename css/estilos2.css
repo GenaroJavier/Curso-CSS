@@ -1,13 +1,36 @@
 body {
 	font-size: 18px;
+	padding: 15px;
+	background: linear-gradient(90deg,  #00586A, #92d593);
 }
 
 .grid-container {
-	width: 100vw;
+	width: 90vw;
 	height: 90vh;
-	background: linear-gradient(90deg,  #00586A, #92d593);
+	margin: auto;
+	background: seagreen;
 	display: grid;
+	border: 3px solid #000;
 	/*Aplican al grid container*/
 	grid-template-rows: 150px 150px 150px;
-	grid-template-columns: 150px 150px 150px;
+	grid-template-columns: 150px 150fr 150fr;
 }
+
+.grid-item {
+	border: 1px solid #000;
+	background: yellowgreen;
+}
+
+/* Medidad especificas en Grid 
+	Medida Fr: 
+		El Fr significa Fraccion, eso quiere decir que si 
+		nosotros le asignamos fr a un columna por ejemplo
+		este columna se va adaptar al tamaño sobrante del
+		grid container, por ejemplo 
+		
+		grid-template-columns: 150px 150fr 150fr; 
+
+		aqui estamos especificando que dos columnas van a medir 
+		el espacio sobrante, eso quiere decir que se van a agrandar
+		dependiendo del contenedor o por el contrario se van a hacer mas pequeñas. 
+*/
