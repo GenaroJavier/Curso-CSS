@@ -2,97 +2,36 @@
 	font-family: 'Quicksand', sans-serif;
 	font-weight: bold;
 }
+/*Conceptos basicos Grid
+	-Grid container
+		Es el contenedor de los elementos 
 
-body {
-	background-color: #252422;
-}
+	-Grid item
+		Cada uno de los elementos dentro del contenedor del grid container se convierte 
+		automaticamente en un grid item. Cabe mencionar que solo aplica con hijos directos. 
+		eje. 
+		
+		<div.container>
+			<div.item1></div>
+			<div.item2>
+				<div.itemHijo>
+				Item hijo ya no es un item directo. 
+				</div>
+			</div>
+			<div.item3></div>
+		<div>
+	
+	-Grid cell 
+		Son las divisiones dentro del grid container 
 
-.flex-container {
-	width: 60%;
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	background-color: #403d39;
-	margin: auto;
-	margin-top: 10%;
-	border: 1px solid #fffcf2;
-}
+	-Grid traks 
+		grid track y grid column 
+		son como las filas y columnas completas dentro del grid container. 
 
-.flex-container .form, .form-img {
-	justify-content: space-evenly;
-	flex-wrap: wrap;
-}
+	-Grid area
+		Son areas que nosotros seleccionamos y definimos. Tienen que ser consecutivas
+		esto quiere decir que no deben de cruzarse. 
 
-.flex-container .form {
-	width: 70%;
-	text-align: center;
-	margin: auto;
-	order: 2;
-}
-
-.form-input {
-	width: 100%;
-	padding: 7px;
-	margin: 6px 0;
-	border: none;
-	border-bottom: 3px solid #2E2C29;
-	background-color: #403d39;
-	color: #b7b7a4;
-}
-
-.form-input:hover {
-	background-color: #504C47;
-	color: white;
-	border-bottom: 3px solid white;
-}
-
-.form-input:focus {
-	/*Es como un degradado al darle click en el input*/
-	background: linear-gradient(to bottom, transparent, #2E2C29);
-	outline: none;
-	border-bottom: 3px solid white;
-}
-
-
-.form textarea {
-	min-height: 140px;
-	resize: none;
-}
-
-.form-img {
-	padding: 10px;
-	display: flex;
-	border-radius: 20px;
-	margin: auto;
-}
-
-.container-img {
-	padding: 10px;
-	display: flex;
-	background-color: #ccc5b9;
-	border-radius: 50%;
-	flex-wrap: wrap;
-	border: 2px solid #fffcf2;
-	max-width: 200px;
-	min-width: 50px;
-	order: 1;
-}
-
-.form-img img {
-	width: 100%;
-	height: 100%;
-	padding: 20px;
-}
-
-.form input[type="submit"] {
-	background-color: #2E2C29;
-	color: white;
-	border-bottom: none;
-	padding: 15px;
-	width: 50%;
-}
-
-.form input[type="submit"]:hover {
-	background-color: #403d39;
-	outline: 3px solid #2E2C29;
-}
+	-Grid line
+		Son como los bordes de las filas o columnas. 
+*/
