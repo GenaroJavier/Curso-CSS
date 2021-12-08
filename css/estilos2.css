@@ -1,37 +1,13 @@
-* {
-	font-family: 'Quicksand', sans-serif;
-	font-weight: bold;
+body {
+	font-size: 18px;
 }
-/*Conceptos basicos Grid
-	-Grid container
-		Es el contenedor de los elementos 
 
-	-Grid item
-		Cada uno de los elementos dentro del contenedor del grid container se convierte 
-		automaticamente en un grid item. Cabe mencionar que solo aplica con hijos directos. 
-		eje. 
-		
-		<div.container>
-			<div.item1></div>
-			<div.item2>
-				<div.itemHijo>
-				Item hijo ya no es un item directo. 
-				</div>
-			</div>
-			<div.item3></div>
-		<div>
-	
-	-Grid cell 
-		Son las divisiones dentro del grid container 
-
-	-Grid traks 
-		grid track y grid column 
-		son como las filas y columnas completas dentro del grid container. 
-
-	-Grid area
-		Son areas que nosotros seleccionamos y definimos. Tienen que ser consecutivas
-		esto quiere decir que no deben de cruzarse. 
-
-	-Grid line
-		Son como los bordes de las filas o columnas. 
-*/
+.grid-container {
+	width: 100vw;
+	height: 90vh;
+	background: linear-gradient(90deg,  #00586A, #92d593);
+	display: grid;
+	/*Aplican al grid container*/
+	grid-template-rows: 150px 150px 150px;
+	grid-template-columns: 150px 150px 150px;
+}
