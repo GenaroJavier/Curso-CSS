@@ -16,6 +16,8 @@ body {
 	/*Aplican al grid container*/
 	grid-template-rows: repeat(6, 1fr);
 	grid-template-columns: repeat(4, 1fr);
+	/*Grid implicito*/
+	grid-auto-rows: 1fr;
 }
 
 .grid-item {
@@ -43,9 +45,19 @@ body {
 	grid-column-end: 4;
 }
 
-/* repeat
-	Nos ayuda a especificar el numero de columnas y filas 
-	facilmente. 
-		grid-template-rows: repeat(6, 1fr);
-	los valores son: (El numero de veces que se repite) y (el tamaño)
+/* Grid explicito y Grid implicito
+
+	Grid implicito
+		Son los elementos que se acomodan aun asi nosotros 
+		nos los hayamos tenido comtemplados, es decir, si nosotros 
+		en nuestro contenedor tenemos 6 items, y por otro 
+		motivo se agregan mas items, estos se acoplaran a lo 
+		estipulado en el grid implicito. 
+
+	Para ello podemos usar las propiedades: 
+		grid-auto-rows: 1fr;
+		grid-auto-columns: 1fr;
+
+	Lo que hace esta propiedad es especificar el tamaño de las filas o 
+	columnas que se van a ir creando automaticamente. 
 */
