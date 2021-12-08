@@ -14,8 +14,8 @@ body {
 	margin-bottom: 1rem;
 	grid-gap: 0.5rem;
 	/*Aplican al grid container*/
-	grid-template-rows: 150fr 150fr 150fr 150fr;
-	grid-template-columns: 150px 150fr 150fr 150fr;
+	grid-template-rows: repeat(6, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 }
 
 .grid-item {
@@ -43,14 +43,9 @@ body {
 	grid-column-end: 4;
 }
 
-/* Grid row y Grid column 
-	Con esta propiedad, especificamos donde queremos que
-	empiece y termine una columna u una fila. 
-
-	Estos atributos son un shorthand de los atributos: 
-		-grid-row-start
-		-grid-row-end 
-
-		-grid-column-start
-		-grid-column-end
+/* repeat
+	Nos ayuda a especificar el numero de columnas y filas 
+	facilmente. 
+		grid-template-rows: repeat(6, 1fr);
+	los valores son: (El numero de veces que se repite) y (el tamaño)
 */
