@@ -11,9 +11,23 @@ body {
 	background: seagreen;
 	display: grid;
 	border: 3px solid #000;
+	margin-bottom: 1rem;
 	/*Aplican al grid container*/
-	grid-template-rows: 150px 150px 150px;
+	grid-template-rows: 150fr 150fr 150fr;
 	grid-template-columns: 150px 150fr 150fr;
+}
+
+.gap {
+	/*Orden: Filas Columnas*/
+	grid-gap: 1rem 0.5rem;
+}
+
+.row-gap{
+	grid-row-gap: 1rem;
+}
+
+.row-column{
+	grid-column-gap: 1rem;
 }
 
 .grid-item {
@@ -21,16 +35,17 @@ body {
 	background: yellowgreen;
 }
 
-/* Medidad especificas en Grid 
-	Medida Fr: 
-		El Fr significa Fraccion, eso quiere decir que si 
-		nosotros le asignamos fr a un columna por ejemplo
-		este columna se va adaptar al tamaño sobrante del
-		grid container, por ejemplo 
-		
-		grid-template-columns: 150px 150fr 150fr; 
+/* Grid Gap 
+	Es como una especie de margen en las celdas, es la 
+	distancia entre una celda y otra. 
 
-		aqui estamos especificando que dos columnas van a medir 
-		el espacio sobrante, eso quiere decir que se van a agrandar
-		dependiendo del contenedor o por el contrario se van a hacer mas pequeñas. 
+	cabe mencionar que este margen solo aplica entre las celdas 
+	eso quiere decir que los margenes no aplican para las grid line 
+	del contenedor. 
+
+	Si queremos especificar solo el espacio entre las filas podemos utilizar 
+		Grid-row-gap 
+
+	Lo mismo aplicaria para las columnas 
+		Grid-row-column
 */
