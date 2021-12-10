@@ -21,95 +21,42 @@ h2{
 	margin-bottom: 1rem;
 	grid-gap: 0.5rem;
 	/*Aplican al grid container*/
-	grid-template-rows: repeat(3, 150px);
-	grid-template-columns: repeat(3, 200px);
-	/*Grid implicito*/
-	grid-auto-rows: 1fr;
-	grid-auto-flow: dense;
-}
-
-.center {
-	justify-items: center;	
-}
-
-.start {
-	justify-items: start;
-}
-
-.end {
-	justify-items: end;
-}
-
-.Acenter {
-	align-items: center;
-}
-
-.Astart {
-	align-items: start;
-}
-
-.Aend {
-	align-items: end;
-}
-
-.Ccenter {
-	align-content: center;
-}
-
-.Cstart {
-	align-content: start;
-}
-
-.Cend {
-	align-content: end;
-}
-
-.JCcenter {
-	justify-content: center;
-}
-
-.JCstart {
-	justify-content: start;
-}
-
-.JCend {
-	justify-content: end;
-}
-
-.JCspace {
-	align-content: center;
-	justify-content: space-evenly;
-}
-
-.JCbetween {
-	align-content: center;
-	justify-content: space-between;
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 }
 
 .grid-item {
+	width: 110px;
+	height: 110px;
 	border: 1px solid #000;
 	background: yellowgreen;
 	font: 2rem bold;
+	align-self: center;
+	justify-self: center;
 }
 
-.JACenter {
-	align-content: center;
-	justify-content: center;
+.grid-item:nth-child(2) {
+	align-self: flex-end;
 }
 
+.grid-item:nth-child(6) {
+	justify-self: start;
+}
 
-/* Alinenación en Grid 
-	Al igual que con flexbox podemos alinear los elementos usando algunas 
-	propiedades. 
+.grid-item:nth-child(8) {
+	align-self: flex-start;
+}
 
-		align-items: center; (alineacion en Y)
-		justify-items: end; (alineacion en X)
+.grid-item:nth-child(4) {
+	justify-self: end;
+}
+/* Aling self 
+	Con esta propiedad especificamos como queremos que se acomode un item dentro 
+	de una celda.
 
-	Estas propiedad nos ayudan a alinear los items. ITEMS
+	El shorthan es: 
+
+		place self: end star; 
 	
-	Para alinear columnas y filas usamos las propiedades de: 
-		align-content: center; (alineacion en Y)
-		justify-content: end; (alineacion en X)
-
-	
+	el orden es el siguiente: justify y aling
 */
