@@ -4,65 +4,64 @@ body {
 
 .grid-container {
 	width: 95vw;
-	height: 90vh;
 	display: grid;
 	margin: 2vh auto;
-	background-color: aquamarine;
-	grid-template-rows: repeat(auto-fill, 1fr);
-	grid-template-areas: 
-		"header header header"
-		"aside main main"
-		"aside main main"
-		"aside main main"
-		"aside main main"
-		"aside main main"
-		"aside main main"
-		"aside main main"
-		"footer footer footer";
+	background-color: steelblue;
+	grid-template-rows: 
+			[primera-linea-fila]
+			150px 
+			[segunda-linea-fila]
+			150px 
+			[tercera-linea-fila]
+			150px;
+	grid-template-columns:
+			[primera-linea-columna]
+			150px 
+			[segunda-linea-columna]
+			150px 
+			[tercera-linea-columna]
+			150px;
+	padding: 5px;
 }
 
 .grid-item {
 	padding: 1rem;
+	border: 1px solid #ffff;
+	color: #ffff;
 }
 
-.header {
-	background-color: violet;
-	grid-area: header;
-}
-
-.main {
-	background-color: tomato;
-	grid-area: main;
-}
-
-.aside {
+.grid-item:first-child {
 	background-color: teal;
-	grid-area: aside;
+	grid-row: 1 / tercera-linea-fila;
+	grid-column: 1 / tercera-linea-columna;
 }
 
-.footer {
-	background-color: steelblue;
-	grid-area: footer;
+.grid-item:nth-child(2) {
+	background-color: tomato;
+	grid-row: 1 / tercera-linea-fila;
 }
 
-ul li {
-	display: inline-block;
-	margin: 0 3% 0 3%;
-}
 
-/*	Grid Areas
+/*	Nombrar Grid lines
+	Podemos darle nombre a las grid-lines de la siguiente 
+	forma: 
 
-	Nos ayudan a crear la estructura de la pagina en base a areas
-	se especifica de la siguiente forma: 
+	grid-template-rows: 
+			[primera-linea-fila]
+			150px 
+			[segunda-linea-fila]
+			150px 
+			[tercera-linea-fila]
+			150px;
+	grid-template-columns:
+			[primera-linea-columna]
+			150px 
+			[segunda-linea-columna]
+			150px 
+			[tercera-linea-columna]
+			150px;
 
-	grid-template-areas: 
-		"header header header"
-		"aside main main"
-		"aside main main"
-		"footer footer footer";
-
-	Para interpretarlo podemos imaginarnos que cada palabra 
-	representa un columna y que cada renglon una fila. 
-	por ende al especificar el nombre de una seccion esta tomara 
-	su lugar automaticamente. 
+	Gracias a esto al especificar el tamaño de un item
+	podemos hacerlo poniendo el nombre de la grid-line 
+	a la que queremos que llegue. 
 */
