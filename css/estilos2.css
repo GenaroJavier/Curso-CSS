@@ -26,8 +26,8 @@ h2{
 }
 
 .grid-item {
-	width: 110px;
-	height: 110px;
+	width: 100%;
+	height: 100%;
 	border: 1px solid #000;
 	background: yellowgreen;
 	font: 2rem bold;
@@ -36,27 +36,17 @@ h2{
 }
 
 .grid-item:nth-child(2) {
-	align-self: flex-end;
-}
-
-.grid-item:nth-child(6) {
-	justify-self: start;
-}
-
-.grid-item:nth-child(8) {
-	align-self: flex-start;
+	background-color: turquoise;
+	order: 5;
 }
 
 .grid-item:nth-child(4) {
-	justify-self: end;
+	background-color: thistle;
+	order: 5;
 }
-/* Aling self 
-	Con esta propiedad especificamos como queremos que se acomode un item dentro 
-	de una celda.
 
-	El shorthan es: 
-
-		place self: end star; 
-	
-	el orden es el siguiente: justify y aling
+/* Order 
+	Esta propiedad es como un z-indez pero que ordenas los items de 
+	acuerdo a un peso que nosotros le asignemos, si un item tiene 
+	5 y otro 10, el que de mayor peso ira primero. 
 */
