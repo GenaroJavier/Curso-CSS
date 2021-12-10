@@ -15,7 +15,7 @@ body {
 	grid-gap: 0.5rem;
 	/*Aplican al grid container*/
 	grid-template-rows: repeat(3, 1fr);
-	grid-template-columns: repeat(3, max-content);
+	grid-template-columns: repeat(3, minmax(100px, 200px));
 	/*Grid implicito*/
 	grid-auto-rows: 1fr;
 	grid-auto-flow: dense;
@@ -27,8 +27,7 @@ body {
 }
 
 
-
-/* Min-content
-	Esta propiedad hace que el tamaño en este caso de la columna sea el maximo
-	de acuerdo al contenido del item. 
+/* MinMax
+	Esta propiedad es un shorthand de las dos anteriores, 
+	como minimo las columnas mediran 100px y como maximo 200
 */
