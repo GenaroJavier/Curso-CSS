@@ -1,52 +1,43 @@
 body {
 	font-size: 18px;
-	padding: 15px;
-	background: linear-gradient(90deg,  #00586A, #92d593);
-}
-
-h2{
-	font-size: 2rem;
-	color: white;
-	text-align: center;	
-	margin-bottom: 1rem;
 }
 
 .grid-container {
 	width: 90vw;
-	height: 90vh;
-	margin: auto;
-	background: seagreen;
 	display: grid;
-	border: 3px solid #000;
-	margin-bottom: 1rem;
-	grid-gap: 0.5rem;
-	/*Aplican al grid container*/
-	grid-template-rows: repeat(3, 1fr);
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	grid-auto-rows: 120px;
+	margin: 5vh auto;
+	grid-gap: 1rem;
 }
 
-.grid-item {
+.grid-container img {
 	width: 100%;
 	height: 100%;
-	border: 1px solid #000;
-	background: yellowgreen;
-	font: 2rem bold;
-	align-self: center;
-	justify-self: center;
+	object-fit: cover;
+	border-radius: 2px;
 }
 
-.grid-item:nth-child(2) {
-	background-color: turquoise;
+.grid-container img:nth-child(1) {
+	grid-column: 1 / span 2;
+	grid-row: 1 / span 2;
+}
+
+.grid-container img:nth-child(4) {
+	grid-row: 2 / span 2;
+}
+
+.grid-container img:nth-child(6) {
 	order: 5;
+	grid-column: 1 / span 2;
+	grid-row: 5 / span 2;
 }
 
-.grid-item:nth-child(4) {
-	background-color: thistle;
-	order: 5;
+.grid-container img:nth-child(12) {
+	grid-row: 4 / span 3;
 }
 
-/* Order 
-	Esta propiedad es como un z-indez pero que ordenas los items de 
-	acuerdo a un peso que nosotros le asignemos, si un item tiene 
-	5 y otro 10, el que de mayor peso ira primero. 
-*/
+
+.grid-container img:nth-child(10) {
+	grid-row: 4 / span 3;
+}
