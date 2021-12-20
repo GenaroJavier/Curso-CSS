@@ -2,66 +2,44 @@ body {
 	font-size: 18px;
 }
 
-.grid-container {
-	width: 95vw;
-	display: grid;
-	margin: 2vh auto;
-	background-color: steelblue;
-	grid-template-rows: 
-			[primera-linea-fila]
-			150px 
-			[segunda-linea-fila]
-			150px 
-			[tercera-linea-fila]
-			150px;
-	grid-template-columns:
-			[primera-linea-columna]
-			150px 
-			[segunda-linea-columna]
-			150px 
-			[tercera-linea-columna]
-			150px;
-	padding: 5px;
+.div-responsive {
+	background-color: coral;
 }
 
-.grid-item {
-	padding: 1rem;
-	border: 1px solid #ffff;
-	color: #ffff;
+@media screen and (min-width: 200px) and (max-width:320px){
+	.div-responsive {
+		background-color: cornflowerblue;
+	}
 }
 
-.grid-item:first-child {
-	background-color: teal;
-	grid-row: 1 / tercera-linea-fila;
-	grid-column: 1 / tercera-linea-columna;
+@media screen and (min-width: 320px) and (max-width:375px){
+	.div-responsive {
+		background-color: crimson;
+	}
 }
 
-.grid-item:nth-child(2) {
-	background-color: tomato;
-	grid-row: 1 / tercera-linea-fila;
+@media screen and (min-width: 375px) and (max-width: 563px){
+	.div-responsive {
+		background-color: darkblue;
+		color: #fff;
+	}
 }
 
 
-/*	Nombrar Grid lines
-	Podemos darle nombre a las grid-lines de la siguiente 
-	forma: 
+/*	Responsive Desing 
+	
+	Cuando trabajamos con responsibe desing, trabajamos con estructuras flexibles, 
+	media queries que se usan en consultas de medios para aplicar diferentes estilos para
+	diferentes tipos / dispositivos de medios. 
 
-	grid-template-rows: 
-			[primera-linea-fila]
-			150px 
-			[segunda-linea-fila]
-			150px 
-			[tercera-linea-fila]
-			150px;
-	grid-template-columns:
-			[primera-linea-columna]
-			150px 
-			[segunda-linea-columna]
-			150px 
-			[tercera-linea-columna]
-			150px;
+	validamos: 
+		-ancho y alto de la ventana gráfica
+		-ancho y alto del dispositivo
+		-orientación 
+		-resolución 
 
-	Gracias a esto al especificar el tamaño de un item
-	podemos hacerlo poniendo el nombre de la grid-line 
-	a la que queremos que llegue. 
+	Orientación 
+		-Lanscape (Escritorio)
+		-Portrait (Movil)
+
 */
