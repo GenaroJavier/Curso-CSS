@@ -2,63 +2,80 @@ body {
 	font-size: 18px;
 }
 
-.content {
-	display: flex;
-	flex-direction: column;
-	height: 100vh;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-.header, .main, .aside, .footer {
-	padding: 1.5rem;
+.container {
+	background-color: lightskyblue;
+	padding: 1rem;
 }
 
-.header {
-	background-color: lightblue;
-	flex-basis: 60px;
+.caja {
+	background-color: red;
+	height: 100px;
+	width: 100px;
+	margin: 10px 0;
+	transition-property: background, left;
+	transition-duration: 2s, 1s;
+	position: relative;
+	left: 0;
 }
 
-.main {
-	background-color: lightcoral;
-	flex-basis: 300px;
-	flex-grow: 2;
-	flex-shrink: 0;
+/*Aqui estamos diciendo que por ejemplo, el efecto hover
+empieza cuando nosotros posicionemos nuestro mouse sobre el contenedor 
+en este caso, perooo los cambios se le aplicaran a los elementos hijo, en este caso 
+las cajas.*/
+
+.container:hover > .caja {
+	background-color: blue;
+	left: 90%;
 }
 
-.aside {
-	background-color: lightgreen;
-	flex-basis: 200px;
-	flex-grow: 1;
-	flex-shrink: 0;
+.caja:first-child {
+	transition-timing-function: linear;
 }
 
-.footer {
-	background-color: lightseagreen;
-	flex-grow: 1;
+.caja:nth-child(2) {
+	transition-timing-function: ease;
 }
 
-
-@media screen and (min-width: 400px) and (max-width: 700px){
-	.content {
-		display: grid;
-		grid-template-rows: 80px 1fr 1fr 1fr 1fr 80px;
-		grid-template-columns: repeat(3, 1fr);
-	}
-
-	.header {
-		grid-column: 1 / span 3;
-	}
-
-	.main {
-		grid-column: 1/3;
-		grid-row: 2/6;
-	}
-
-	.aside {
-		grid-row: 2/6;
-	}
-	
-	.footer {
-		grid-row: 6/7;
-		grid-column: 1 / span 3;
-	}
+.caja:nth-child(3) {
+	transition-timing-function: ease-in;
 }
+
+.caja:nth-child(4) {
+	transition-timing-function: ease-out;
+}
+
+.caja:last-child {
+	transition-timing-function: ease-in-out;
+}
+
+/*
+	transition 
+
+	Depende de dos propiedades fundamentales para poder funcionar: 
+		transition-property: (aqui va la propiedad a modificar)
+		transition-duration: (duracion en segundos)
+
+		como su nombre lo dice le otorga un delay a la transicion antes de realizarla
+		ademas de otorgar el mismo delay despues de realizar la tr
+		transition-delay
+
+		Con esta propiedad podemos manejar los tiempos de animacion, las atributos 
+		que especificamos, determinar el manejo del tiempo en la animacion, por ejemplo podemos decir que 
+		inicie rapido pero termine lento, o que sea siempre lineal, etc.  
+			
+			-transition-timing-function: ease-in-out;
+
+	notas:
+		-evitar usar all por eso de consumir muchos recursos. 
+
+		-inherit: esta propiedad lo que hace es heredar algo del padre. 
+		por ejemplo si mi contenedor es verde, el hijo con la propiedad inherit 
+		tendra el mismo color verde que el padre. 
+
+*/
