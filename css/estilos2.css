@@ -19,18 +19,39 @@ body {
 	height: 100px;
 	width: 100px;
 	margin: 10px 0;
-	animation-name: desplazamiento;
-	animation-duration: 2s;
+	/*Es importante especificar el posicionamiento para que la animacion funcione*/
 	position: relative;
+	/*Propiedades de animaciones*/
+
+	/*Aqui mandamos a llamar la animacion que creamos*/
+	animation-name: desplazamiento;
+	/*Duracion de la animacion*/
+	animation-duration: 2s;
+	/*Cuantas veces se va a repetir aqui especificamos cuantas veces quieres que se repita
+	o si queremos que sea infinito (infinite)*/
+	animation-iteration-count: 3;
+	/*Dirección que toma la animacion*/
+	animation-direction: alternate;
+	/*Define el modo en que la animación terminará*/
+	animation-fill-mode: both;
+	animation-delay: 1s;
 }
 
+
+/*Estructura de la animación*/
 @keyframes desplazamiento {
-	from {
+	0% {
 		left: 0;
+		background-color: darkgoldenrod;
 	}
 
-	to {
-		left: 92%; 
+	50% {
+		background-color: chocolate;
+	}
+
+	100% {
+		left: 93%; 
+		background-color: burlywood;
 	}
 }
 
@@ -43,12 +64,46 @@ body {
 	@keyframes (nombre de la animación) {} 
 
 	Tenemos dos formas de crear una animación 
-	la primera es con: 
+	la segundo es con porcentajes, los cuales represantan la duracion de la animacion 
 
-	from {
+	0% {
 		aqui especificamos las propiedades del elemento, cuando comienza la animacion
 	}
-	to {
-
+	50% {
+		Esto podria ser cuando la animacion va en la mitad. 
 	}
+
+	100% {
+		al final de la animacion. 
+	}
+
+		-animation-timing-function: ease;
+	Es la velocidad con la que se desplaza el elemento, como lo vimos en transition
+
+		-animation-direction: ;
+	Con esta propiedad nosotros especificamos la direccion que queremos que tome 
+	nuestra animacion, los valores que acepta son: 
+
+		-normal (Es el desplazamiento que nosotros le otorgamos)
+		-reverse (Empezaria al reves la animación, ejem si la animacion empieza de 
+		0% a 50% y 100%, empezaria de 100%, 50% y 0%).
+		-alternate (Con esta propiedad nosotros decimos que empiece de forma nomal 
+		pero que no vuelva a empezar, si no que ahora realize la animacion en reverse). 
+		-alternate-reverse (Es lo mismo que la anteior con la diferencia de que empieza
+		al reves)
+	
+		-animation-fill-mode:
+		Define el modo final de la animacion. usamos los siguientes atributos. 
+
+		backwards: el elemento obtendra los valores de estilo establecidos por el primer 
+		fotograma clave (depende de la dirección de la animación) y lo conservara durante
+		el periodo de retraso de la animación. 
+
+		forwards: Adquiere la ultima propiedad, eje. Si nosotros ponemos un color de 
+		fondo negro en el 100% de la animacion se quedara con ese color al final de
+		esta. 
+
+		both: En casa de tener un delay, esta propiedad respetara el tiempo de delay
+		y posteriormente aplicara los efectos deseados. Se utiliza para realizar cambios 
+		notorios en las animaciones. 
 */
