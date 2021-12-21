@@ -9,73 +9,46 @@ body {
 }
 
 .container {
+	width: 100vw;
 	background-color: lightskyblue;
 	padding: 1rem;
 }
 
 .caja {
-	background-color: red;
+	background-color: blue;
 	height: 100px;
 	width: 100px;
 	margin: 10px 0;
-	transition-property: background, left;
-	transition-duration: 2s, 1s;
+	animation-name: desplazamiento;
+	animation-duration: 2s;
 	position: relative;
-	left: 0;
 }
 
-/*Aqui estamos diciendo que por ejemplo, el efecto hover
-empieza cuando nosotros posicionemos nuestro mouse sobre el contenedor 
-en este caso, perooo los cambios se le aplicaran a los elementos hijo, en este caso 
-las cajas.*/
+@keyframes desplazamiento {
+	from {
+		left: 0;
+	}
 
-.container:hover > .caja {
-	background-color: blue;
-	left: 90%;
-}
-
-.caja:first-child {
-	transition-timing-function: linear;
-}
-
-.caja:nth-child(2) {
-	transition-timing-function: ease;
-}
-
-.caja:nth-child(3) {
-	transition-timing-function: ease-in;
-}
-
-.caja:nth-child(4) {
-	transition-timing-function: ease-out;
-}
-
-.caja:last-child {
-	transition-timing-function: ease-in-out;
+	to {
+		left: 92%; 
+	}
 }
 
 /*
-	transition 
+	Animaciones
 
-	Depende de dos propiedades fundamentales para poder funcionar: 
-		transition-property: (aqui va la propiedad a modificar)
-		transition-duration: (duracion en segundos)
+	Para la creación de animaciones hacemos uso de keyframes
+	siguiendo la siguiente estructura: 
 
-		como su nombre lo dice le otorga un delay a la transicion antes de realizarla
-		ademas de otorgar el mismo delay despues de realizar la tr
-		transition-delay
+	@keyframes (nombre de la animación) {} 
 
-		Con esta propiedad podemos manejar los tiempos de animacion, las atributos 
-		que especificamos, determinar el manejo del tiempo en la animacion, por ejemplo podemos decir que 
-		inicie rapido pero termine lento, o que sea siempre lineal, etc.  
-			
-			-transition-timing-function: ease-in-out;
+	Tenemos dos formas de crear una animación 
+	la primera es con: 
 
-	notas:
-		-evitar usar all por eso de consumir muchos recursos. 
+	from {
+		aqui especificamos las propiedades del elemento, cuando comienza la animacion
+	}
+	to {
 
-		-inherit: esta propiedad lo que hace es heredar algo del padre. 
-		por ejemplo si mi contenedor es verde, el hijo con la propiedad inherit 
-		tendra el mismo color verde que el padre. 
-
+	}
 */
