@@ -2,44 +2,65 @@ body {
 	font-size: 18px;
 }
 
-.div-responsive {
-	background-color: coral;
+.content {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
 }
 
-@media screen and (min-width: 200px) and (max-width:320px){
-	.div-responsive {
-		background-color: cornflowerblue;
+.header, .main, .aside, .footer {
+	padding: 1.5rem;
+}
+
+.header {
+	background-color: lightblue;
+	flex-basis: 60px;
+}
+
+.main {
+	background-color: lightcoral;
+	flex-basis: 300px;
+	flex-grow: 2;
+	flex-shrink: 0;
+}
+
+.aside {
+	background-color: lightgreen;
+	flex-basis: 200px;
+	flex-grow: 1;
+	flex-shrink: 0;
+}
+
+.footer {
+	background-color: lightseagreen;
+	flex-grow: 1;
+}
+
+
+@media screen and (max-width: 700px){
+	.content {
+		flex-direction: row;
+		flex-wrap: wrap;
 	}
-}
 
-@media screen and (min-width: 320px) and (max-width:375px){
-	.div-responsive {
-		background-color: crimson;
+	.header {
+		flex-basis: 100%;
+		max-height: 60px;
 	}
-}
 
-@media screen and (min-width: 375px) and (max-width: 563px){
-	.div-responsive {
-		background-color: darkblue;
-		color: #fff;
+	.main, .aside {
+		height: 530px;
 	}
-}
 
+	.main {
+		flex-grow: 4;
+	}
 
-/*	Responsive Desing 
+	.aside {
+		flex-grow: 1;
+	}
 	
-	Cuando trabajamos con responsibe desing, trabajamos con estructuras flexibles, 
-	media queries que se usan en consultas de medios para aplicar diferentes estilos para
-	diferentes tipos / dispositivos de medios. 
-
-	validamos: 
-		-ancho y alto de la ventana gráfica
-		-ancho y alto del dispositivo
-		-orientación 
-		-resolución 
-
-	Orientación 
-		-Lanscape (Escritorio)
-		-Portrait (Movil)
-
-*/
+	.footer {
+		flex-basis: 100%;
+	}
+}
