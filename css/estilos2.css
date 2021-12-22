@@ -15,12 +15,13 @@ body {
 }
 
 .caja {
-	background-color: blue;
+	background-color: darkslateblue;
 	height: 100px;
 	width: 100px;
 	margin: 10px 0;
 	/*Es importante especificar el posicionamiento para que la animacion funcione*/
 	position: relative;
+
 	/*Propiedades de animaciones*/
 
 	/*Aqui mandamos a llamar la animacion que creamos*/
@@ -33,12 +34,10 @@ body {
 	/*Dirección que toma la animacion*/
 	animation-direction: alternate;
 	/*Define el modo en que la animación terminará*/
-	animation-fill-mode: both;
-	animation-delay: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-
-/*Estructura de la animación*/
 @keyframes desplazamiento {
 	0% {
 		left: 0;
@@ -50,60 +49,20 @@ body {
 	}
 
 	100% {
-		left: 93%; 
+		left: 92%; 
 		background-color: burlywood;
 	}
 }
 
 /*
-	Animaciones
+	Cubic bezier 
+	Esta propiedad nos permite poder trabajar con animacione y transiciones
+	por medio de una grafica, realmento no se como se llama, pero cada numero
 
-	Para la creación de animaciones hacemos uso de keyframes
-	siguiendo la siguiente estructura: 
 
-	@keyframes (nombre de la animación) {} 
+	cubic-bezier(1,-0.09, 0, 1.04);
 
-	Tenemos dos formas de crear una animación 
-	la segundo es con porcentajes, los cuales represantan la duracion de la animacion 
+	represanta la posicion en el eje x y y de los puntos que representan la curva
+	podemos acceder a ellos por medio de devtools o con un generador. 
 
-	0% {
-		aqui especificamos las propiedades del elemento, cuando comienza la animacion
-	}
-	50% {
-		Esto podria ser cuando la animacion va en la mitad. 
-	}
-
-	100% {
-		al final de la animacion. 
-	}
-
-		-animation-timing-function: ease;
-	Es la velocidad con la que se desplaza el elemento, como lo vimos en transition
-
-		-animation-direction: ;
-	Con esta propiedad nosotros especificamos la direccion que queremos que tome 
-	nuestra animacion, los valores que acepta son: 
-
-		-normal (Es el desplazamiento que nosotros le otorgamos)
-		-reverse (Empezaria al reves la animación, ejem si la animacion empieza de 
-		0% a 50% y 100%, empezaria de 100%, 50% y 0%).
-		-alternate (Con esta propiedad nosotros decimos que empiece de forma nomal 
-		pero que no vuelva a empezar, si no que ahora realize la animacion en reverse). 
-		-alternate-reverse (Es lo mismo que la anteior con la diferencia de que empieza
-		al reves)
-	
-		-animation-fill-mode:
-		Define el modo final de la animacion. usamos los siguientes atributos. 
-
-		backwards: el elemento obtendra los valores de estilo establecidos por el primer 
-		fotograma clave (depende de la dirección de la animación) y lo conservara durante
-		el periodo de retraso de la animación. 
-
-		forwards: Adquiere la ultima propiedad, eje. Si nosotros ponemos un color de 
-		fondo negro en el 100% de la animacion se quedara con ese color al final de
-		esta. 
-
-		both: En casa de tener un delay, esta propiedad respetara el tiempo de delay
-		y posteriormente aplicara los efectos deseados. Se utiliza para realizar cambios 
-		notorios en las animaciones. 
 */
