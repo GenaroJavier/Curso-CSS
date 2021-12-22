@@ -11,7 +11,7 @@ body {
 .container {
 	width: 100vw;
 	background-color: lightskyblue;
-	padding: 1rem;
+	padding: 2rem;
 }
 
 .caja {
@@ -19,50 +19,63 @@ body {
 	height: 100px;
 	width: 100px;
 	margin: 10px 0;
-	/*Es importante especificar el posicionamiento para que la animacion funcione*/
-	position: relative;
-
-	/*Propiedades de animaciones*/
-
-	/*Aqui mandamos a llamar la animacion que creamos*/
-	animation-name: desplazamiento;
-	/*Duracion de la animacion*/
-	animation-duration: 2s;
-	/*Cuantas veces se va a repetir aqui especificamos cuantas veces quieres que se repita
-	o si queremos que sea infinito (infinite)*/
-	animation-iteration-count: 3;
-	/*Dirección que toma la animacion*/
-	animation-direction: alternate;
-	/*Define el modo en que la animación terminará*/
-	animation-fill-mode: forwards;
-	animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+	display: flex;
+	margin: 10px 0;
+	transition-duration: 1s;
 }
 
-@keyframes desplazamiento {
-	0% {
-		left: 0;
-		background-color: darkgoldenrod;
-	}
+.caja:first-child {
+	transition-property: transform, background;
+}
 
-	50% {
-		background-color: chocolate;
-	}
+.caja:first-child:hover {
+	transform: translateX(10rem);
+	background: firebrick;
+}
 
-	100% {
-		left: 92%; 
-		background-color: burlywood;
-	}
+.caja:nth-child(2) {
+	transition-property: transform, background;
+}
+
+.caja:nth-child(2):hover {
+	transform: scale(2);
+	background: fuchsia;
+}
+
+.caja:nth-child(3) {
+	transition-property: transform, background;
+}
+
+.caja:nth-child(3):hover {
+	transform: skewX(30deg);
+	background: gold;
+}
+
+.caja:nth-child(3):hover b {
+	transform: skew(-30deg);
+}
+
+b {
+	margin: auto;
+	font-size: 1.5rem;
+	color: #fff;
 }
 
 /*
-	Cubic bezier 
-	Esta propiedad nos permite poder trabajar con animacione y transiciones
-	por medio de una grafica, realmento no se como se llama, pero cada numero
+	Transform 
+	es facil intuir que es lo que realiza esta propiedad, asi
+	que me pasare directo a los atributos. 
 
+		-Translate X o Y (traslada el elemento, dependiendo el eje 
+		que nosotros especifiquemos) 
+		-scale (escala el elemento)
+		los valores que le asigamos son por ejemplo: 1 que seria el tamaño normal
+		o 2 que seria el doble. igual podemos escalar segun el eje 
+		en ese caso usariamos scaleX o scaleY 
+		-skew (deforma el elemento)
 
-	cubic-bezier(1,-0.09, 0, 1.04);
-
-	represanta la posicion en el eje x y y de los puntos que representan la curva
-	podemos acceder a ellos por medio de devtools o con un generador. 
-
+		nota: si queremos hacer animacion se recomiendo usar
+		el translate por motivos de rendimiento, ya que al usar translate no modificamos 
+		la estructura de la pagina, si no que creamos otra capa y al realizar esto se consume 
+		mucho menos recursos. 
 */
