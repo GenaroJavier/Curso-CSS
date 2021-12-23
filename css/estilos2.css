@@ -9,35 +9,55 @@ body {
 }
 
 .container {
-	width: 100vw;
-	background-color: lightskyblue;
-	padding: 2rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.caja {
-	background-color: darkslateblue;
+	width: 50vw;
 	height: 200px;
-	width: 250px;
-	margin: 10px 0;
-	display: flex;
-	margin: 10px 0;
+	margin: 2rem auto;
+	background-image: url(https://images.unsplash.com/photo-1564865878688-9a244444042a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
 }
 
-.caja:first-child {
-	clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
-
+.container2 {
+	width: 50vw;
+	height: 200px;
+	margin: 2rem auto;
+	background-image: url(https://images.unsplash.com/photo-1564865878688-9a244444042a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+	/*Esta propiedad nos permite asignar un tamaño al background*/
+	background-size: 200px 100px;
 }
 
-b {
-	font-size: 1.5rem;
-	color: #fff;
+.container3 {
+	width: 50vw;
+	height: 200px;
+	margin: 2rem auto;
+	background-image: url(https://images.unsplash.com/photo-1564865878688-9a244444042a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+	/*Esta propiedad nos permite asignar un tamaño al background*/
+	background-size: auto;
 }
 
-/*
-	Clip-path 
-	Esta propiedad nos permite cambiar la forma de nuestro elemento, 
-	aque es recomendable usar generadores, para facilitar algun trabajo. 
-*/
+.container4 {
+	width: 50vw;
+	height: 200px;
+	margin: 2rem auto;
+	background-image: url(https://images.unsplash.com/photo-1564865878688-9a244444042a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+	/*Esta propiedad nos permite asignar un tamaño al background*/
+	background-size: contain;
+}
+
+.container5 {
+	width: 50vw;
+	height: 200px;
+	margin: 2rem auto;
+	background-image: url(https://images.unsplash.com/photo-1564865878688-9a244444042a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+	background-size: 55% 170px;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	border: 1px solid red;
+}
+
+.container6 {
+	width: 100%;
+	height: 300px;
+	margin: 2rem auto;
+	background-image: url(https://images.unsplash.com/photo-1564865878688-9a244444042a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+	background-size: cover;
+	background-attachment: fixed;
+}
