@@ -8,78 +8,39 @@ body {
 	box-sizing: border-box;
 }
 
-.galery-container {
+.container {
 	width: 100%;
-	background-color: yellowgreen;
+	height: 300px;
+	background-color: #fff;
 	padding: 1rem;
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-	grid-auto-rows: 7.5rem;
-	grid-gap: 0.5rem;
 	margin: 10px auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	filter: contrast(30);
 }
 
-.galery-container img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	min-width: 250px;
-	cursor: pointer;
+.caja {
+	width: 200px;
+	height: 200px;
+	margin: 1rem 4rem;
+	border-radius: 50%;
+	filter: blur(10px);
+	background-color: red;
 }
 
-.galery-container img:first-child {
-	grid-column: 1 / 3;
-	grid-row: 1 / span 2;
-}
-/*Filtro de desenfoque*/
-.galery-container img:first-child:hover {
-	filter: blur(5px);
+.caja:first-child {
+	animation: trasladar 1s alternate infinite;
 }
 
-.galery-container img:nth-child(2) {
-	grid-column: 3 / span 2;
-}
-/*Filtro de brillo (0 al 1)*/
-.galery-container img:nth-child(2):hover {
-	filter: brightness(0.5);
-}
-.galery-container img:nth-child(3) {
-	grid-row: 1 / span 3;
-	grid-column: 5 / 6;
-}
-/*Nos sirve para darle un efecto de sombra a las img png*/
-.galery-container img:nth-child(4):hover {
-	filter: drop-shadow(5px 5px 5px red);
-}
 
-.galery-container img:nth-child(5) {
-	grid-row: 2 / span 3;
-}
+@keyframes trasladar {
+	0% {
+		transform: translate(0);
+	}
 
-.galery-container img:nth-child(5):hover {
-	filter: grayscale(50%);
-}
-
-/*Invierte los colores recibiendo grados*/
-.galery-container img:nth-child(6):hover {
-	filter: hue-rotate(90deg);
-}
-
-/*Invierte los colores recibiendo grados*/
-.galery-container img:nth-child(7):hover {
-	filter: invert(70%);
-}
-
-/*Invierte los colores recibiendo grados*/
-.galery-container img:nth-child(8):hover {
-	filter: opacity(0.3);
-}
-
-.galery-container img:nth-child(9) {
-	grid-row: 3 / span 2;
-	grid-column: 1 / 3;
-}
-
-.galery-container img:nth-child(9):hover {
-	filter: contrast(120%);
+	100% {
+		transform: translate(260px);
+	}
+	
 }
