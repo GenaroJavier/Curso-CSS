@@ -1,33 +1,29 @@
 body {
-	font-size: 18px;	
+	font-size: 18px;
 }
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	scroll-behavior: smooth;	
 }
 
 .container {
 	width: 100%;
-	height: 300px;
 	background-color: bisque;
 	padding: 1rem;
 	margin: 10px auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition-property: letter-spacing;
-	transition-duration: 1s;
+	font-size: 2rem;
 }
 
-.container p {
-	font-size: 4rem;
-	font-weight: 800;
+.container:nth-child(2) {
+	background-color: cornflowerblue;
 }
 
-.container:hover {
-	letter-spacing: 10px;
-	transition: 1s ;
-}
-
+/*Nos permite cambiar la forma del scroll, con un efecto de 
+scroll lento y suave. 
+Cabe destacar que se aplica a todos los elementos*/
