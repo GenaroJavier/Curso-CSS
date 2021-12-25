@@ -20,10 +20,13 @@ body {
 	font-size: 2rem;
 }
 
+.container:first-child{
+	user-select: none;
+}
+
+
 .container:nth-child(2) {
 	background-color: cornflowerblue;
 }
 
-/*Nos permite cambiar la forma del scroll, con un efecto de 
-scroll lento y suave. 
-Cabe destacar que se aplica a todos los elementos*/
+/*Nos inpide la selección de texto en la pagina*/
